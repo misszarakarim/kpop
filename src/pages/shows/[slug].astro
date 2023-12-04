@@ -1,0 +1,22 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner",{
+	method:"GET",
+	headers: {
+apikey: 
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro"
+	},
+}).then(response => response.json());
+
+  return data.map((show) => {
+    return {
+      params: { slug: show.slug },
+      props: { myData:show },
+    };
+  });
+}
+
+const {myData} = Astro.props
+console.log(myData);
+
+---
