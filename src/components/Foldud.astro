@@ -4,7 +4,7 @@ const { title, text, color } = Astro.props;
 
 <div class="accordion">
   <div class="accordion-item" style={`background-color: ${color};`} ;>
-    <input type="checkbox" id="accordion1" />
+    <input type="checkbox" class="accordion1" />
     <label for="accordion1" class="accordion-item-title"><span class="icon"></span>{title}</label>
     <div class="accordion-item-desc">{text}</div>
   </div>
