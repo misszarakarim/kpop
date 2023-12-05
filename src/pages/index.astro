@@ -11,8 +11,8 @@ apikey:
 }
 ).then((res) => res.json());
 
-
-
+import BigBox from "../components/BigBox.astro"
+import LittleBox from "../components/LittleBox.astro"
 
 
 ---
@@ -26,6 +26,10 @@ apikey:
 		<title>Astro</title>
 	</head>
 	<body>
+
+		<BigBox />
+		<LittleBox />
+
 		<h1>Astro</h1>
 		{data.map(show=>{
 			return <Pas data={show}/>;
