@@ -1,11 +1,12 @@
 ---
 const { title, text, color } = Astro.props;
+const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`; // Generate a unique ID
 ---
 
 <div class="accordion">
   <div class="accordion-item" style={`background-color: ${color};`} ;>
-    <input type="checkbox" class="accordion1" />
-    <label for="accordion1" class="accordion-item-title"><span class="icon"></span>{title}</label>
+    <input type="checkbox" id={checkboxId} class="accordion-checkbox" />
+    <label for={checkboxId} class="accordion-item-title"><span class="icon"></span>{title}</label>
     <div class="accordion-item-desc">{text}</div>
   </div>
 </div>
@@ -24,7 +25,9 @@ const { title, text, color } = Astro.props;
     margin-top: 10px;
     border: 3px solid #c5117d;
     border-radius: 24px;
-    padding: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .accordion-item-title {
@@ -33,23 +36,26 @@ const { title, text, color } = Astro.props;
     display: flex;
     width: 100%;
     color: #c5117d;
-    font-size: 32px;
+    font-size: 24px;
     cursor: pointer;
     justify-content: space-between;
     flex-direction: row-reverse;
-    padding: 14px 20px;
+    padding: 5px 40px 5px 20px;
     box-sizing: border-box;
     align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .icon {
-      margin-left: 14px;
-      width: 33px;
-      height: 28px;
-      display: inline-block;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transition: transform 0.3s ease;
-    }
+  .icon {
+    margin-left: 20px;
+    width: 33px;
+    height: 28px;
+    aspect-ratio: 70/64;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
   }
 
   .accordion-item-desc {
@@ -59,6 +65,7 @@ const { title, text, color } = Astro.props;
     color: #400027;
     padding: 10px 20px 20px;
     box-sizing: border-box;
+    margin-top: 10px;
   }
 
   input[type="checkbox"] {
