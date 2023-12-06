@@ -7,7 +7,7 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`; // Generate 
   <div class="accordion-item" style={`background-color: ${color};`} ;>
     <input type="checkbox" id={checkboxId} class="accordion-checkbox" />
     <label for={checkboxId} class="accordion-item-title"><span class="icon"></span>{title}</label>
-    <div class="accordion-item-desc">{text}</div>
+    <div class="accordion-item-desc">{text.split("\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
   </div>
 </div>
 
@@ -66,6 +66,7 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`; // Generate 
     padding: 10px 20px 20px;
     box-sizing: border-box;
     margin-top: 10px;
+    whitespace: pre-line;
   }
 
   input[type="checkbox"] {
