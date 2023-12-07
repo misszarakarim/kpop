@@ -12,7 +12,9 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
     <input type="checkbox" id={checkboxId} class="accordion-checkbox" />
     <label for={checkboxId} class="accordion-item-title"><span class="icon"></span>{title}</label>
     <!-- Opdeler tekst ved ny linje og mapper til afsnit  -->
-    <div class="accordion-item-desc">{text.split("\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+    <div class="accordion-item-desc">
+      {text.split("\n").map((paragraph, index) => <p>{paragraph}</p>)}
+    </div>
   </div>
 </div>
 
