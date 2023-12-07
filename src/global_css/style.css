@@ -1,0 +1,40 @@
+/* Hentning af Fonte */
+@font-face {
+    font-family: "zcool";
+    src: url("/fonte/ZCOOLQingKeHuangYou-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "chivo-light";
+    src: url("/fonte/Chivo-Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------
+  Resets / normalize
+------ */
+
+html {
+    background-color: #FAEEFF;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+a,
+label {
+    font-family: "zcool";
+}
+
+p {
+    font-family: "chivo-light";
+}
