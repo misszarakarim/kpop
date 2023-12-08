@@ -46,10 +46,8 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
   </body>
 
   <footer>
-    <!--?xml version="1.0" encoding="utf-8"?-->
-    <!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <div class="foot">
-      <svg version="1.1" id="Lag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+      <svg version="1.1" id="Lag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1980" style="enable-background:new 0 0 1920 1980;" xml:space="preserve">
         <style type="text/css">
           .st0 {
             fill: #f6c5d8;
@@ -58,9 +56,10 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
             stroke-miterlimit: 10;
           }
         </style>
-        <path class="st0" d="M0.5,734.5c98.84-75.12,247.96-157.7,413-137c136.79,17.16,250.43,76.79,383,122c232.65,79.34,394,10.02,493-29
-	c141.89-55.92,170.5-113.94,305-150c123.37-33.07,256.56,5.04,326,40V1080H0.5V734.5z"></path>
+        <path class="st0" d="M0,1419.3c98.8-75.1,248-157.7,413-137c136.8,17.2,250.4,76.8,383,122c232.7,79.3,394,10,493-29
+	c141.9-55.9,170.5-113.9,305-150c123.4-33.1,256.6,5,326,40V1980H0V1419.3z"></path>
       </svg>
+
       <div class="footergrid">
         <div class="footerboks">
           <h4>VISIT OUR PHYSICAL STORE</h4>
@@ -72,11 +71,11 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
         </div>
         <div class="footerboks">
           <h4>FOLLOW US ONLINE</h4>
-          <p>Follow our socials to keep updated on the latest products, events, packing videos & much more!</p>
+          <p class="pabout">Follow our socials to keep updated on the latest products, events, packing videos & much more!</p>
         </div>
         <div class="footerboks">
           <h4>OTHER</h4>
-          <p>About <br />Privacy Policy <br />Terms & Conditions <br />Shipping method <br />Recycle your kpop</p>
+          <p class="pabout">About <br />Privacy Policy <br />Terms & Conditions <br />Shipping method<br />Recycle your kpop</p>
         </div>
       </div>
     </div>
@@ -85,11 +84,7 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
 <style>
   .foot {
     position: relative;
-    margin-top: 150px;
-    padding: 0%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-top: 400px;
   }
   svg {
     position: absolute;
@@ -97,17 +92,26 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     z-index: -1;
     width: 100%;
     height: auto;
-    padding: 0%;
-    margin: 0%;
   }
+  h4 {
+    margin-bottom: 25px;
+    font-weight: 800;
+    font-size: larger;
+  }
+
   .footergrid {
     z-index: 10;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 80px;
+    margin-left: 150px;
   }
   .footerboks {
-    padding: 30px;
+    margin-right: 80px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+  p {
+    line-height: 45px;
   }
 </style>
