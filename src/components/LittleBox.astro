@@ -1,68 +1,163 @@
 <div class="grid-container">
 
    <div class="grid-item">
+
+    <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/BTS.webp" class="img" alt="BTS">
         <p>BTS</p>
     </div>
 
      <div class="grid-item black">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/BLACKPINK.webp" class="img" alt="BLACK PINK">
         <p>BLACK PINK</p>
     </div>
 
     <div class="grid-item">
+
+<div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/seventeen.webp" class="img" alt="SEVENTEEN">
         <p>SEVENTEEN</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/ATEEZ.webp" class="img" alt="ATEEZ">
         <p>ATEEZ</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/itzy.webp" class="img" alt="ITZY">
         <p>ITZY</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/twice.webp" class="img" alt="TWICE">
         <p>TWICE</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/ENHYPEN.webp" class="img" alt="ENHYPEN">
         <p>ENHYPEN</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/TXT.webp" class="img" alt="TXT">
         <p>TXT</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/straykids.webp" class="img" alt="STRAY KIDZ">
         <p>STRAY KIDS</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/NCT.webp" class="img" alt="NCT">
         <p>NCT</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/NewJeans.webp" class="img" alt="NEW JEANS">
         <p>NEW JEANS</p>
     </div>
 
     <div class="grid-item">
+        <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    </div>
         <img src="../public/img/MonstaX.webp" class="img" alt="MONSTA X">
         <p>MONSTA X</p>
     </div>
-
+    
 </div>
 
+
+<!-- MOBILE -->
+
 <style>
+.grid-circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px; /* Adjust the gap as needed */
+      margin-right: -72px;
+      margin-top: -22px;
+      margin-bottom: 6px;
+    }
+
+    .circle {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #C5117D;
+    }
+
+    .circle1 {
+      background-color: #B1FEF5; /* Color for the first circle */
+    }
+
+    .circle2 {
+      background-color: #C8FFA7; /* Color for the second circle */
+    }
+
+    .circle3 {
+      background-color: #FF6F9C; /* Color for the third circle */
+    }
 
 .grid-container {
   display: grid;
@@ -127,6 +222,104 @@
 
 .black {
         padding-bottom: 5%;
+    }
+
+
+
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-container[data-astro-cid-sz5lavy2] {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
+  padding: 6% 4px;
 }
 
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #C5117D;
+  padding: 12px;
+  text-align: center;
+  border-radius: 21%;
+  margin-bottom: 32px;
+  padding-top: 31px;
+  padding-bottom: 11%;
+
+}
+
+.img {
+  width: 103%;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 24%;
+  border: 3px solid #C5117D;
+}
+.grid-circle[data-astro-cid-sz5lavy2] {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3px;
+  margin-right: -136px;
+  margin-top: -22px;
+  margin-bottom: 6px;
+}
+}
+
+
+/* WEB */
+
+@media only screen and (min-width: 1024px) {
+
+.grid-container[data-astro-cid-sz5lavy2] {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+ grid-gap: 82px;
+    padding: 9%;
+    padding-top: 5%;
+}
+
+ .img[data-astro-cid-sz5lavy2] {
+    width: 101%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid #C5117D;
+  }
+
+.grid-item[data-astro-cid-sz5lavy2] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #C5117D;
+  padding: 14px;
+  text-align: center;
+border-radius: 13%;
+  margin-bottom: 32px;
+  padding-top: 27px;
+  padding-bottom: 9%;
+}
+
+  .grid-circle[data-astro-cid-sz5lavy2][data-astro-cid-sz5lavy2] {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3px;
+    margin-right: -227px;
+    margin-top: -22px;
+    margin-bottom: 6px;
+  }
+
+div p {
+    margin-top: 10%;
+}
+
+
+
+
+}
+
+
 </style>
+
