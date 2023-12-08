@@ -1,0 +1,203 @@
+---
+
+---
+
+<div class="grid-item">
+  <h3>Countdown for next event</h3>
+  <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+  <ul class="countdown">
+    <li><span id="days"></span>days</li>
+    <li><span id="hours"></span>Hours</li>
+    <li><span id="minutes"></span>Minutes</li>
+    <li><span id="seconds"></span>Seconds</li>
+  </ul>
+
+  <style>
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid #c5117d;
+      background-color: #c2dcfa;
+      padding: 12px;
+      padding-top: 56px;
+      text-align: center;
+      border-radius: 21px;
+      margin: auto 32px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-right: 90px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      position: absolute;
+      top: 24px;
+    }
+
+    .countdown {
+      border: 3px solid #c5117d;
+      border-radius: 24px;
+      background-color: #fff;
+      padding: 32px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      color: #c5117d;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      font-family: "zcool", sans-serif;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    li span {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 40px;
+    }
+
+    .grid-circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px;
+      margin-left: 199px;
+      margin-top: -34px;
+      margin-bottom: 6px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #c5117d;
+    }
+
+    .circle1 {
+      background-color: #b1fef5; /* Color for the first circle */
+    }
+
+    .circle2 {
+      background-color: #c8ffa7; /* Color for the second circle */
+    }
+
+    .circle3 {
+      background-color: #ff6f9c; /* Color for the third circle */
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      <div class="grid-item" > <h3 > Countdown for next event</h3 > <div class="grid-circle" > <div class="circle circle1" > </div > <div class="circle circle2" > </div > <div class="circle circle3" > </div > </div > <ul class="countdown" > <li > <span id="days" > </span > days</li > <li > <span id="hours" > </span > Hours</li > <li > <span id="minutes" > </span > Minutes</li > <li > <span id="seconds" > </span > Seconds</li > </ul > <style > .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 3px solid #c5117d;
+        background-color: #c2dcfa;
+        padding: 12px;
+        padding-top: 56px;
+        text-align: center;
+        border-radius: 21px;
+        margin: auto 32px;
+      }
+
+      h3 {
+  font-size: 36px;
+    margin-right: 297px;
+    margin-bottom: 10px;
+  }
+      }
+
+      .countdown {
+        padding: 64px 216px;
+      }
+
+      ul {
+        text-align: center;
+      }
+
+      li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      li span {
+        display: block;
+        margin-top: 0.5em;
+        font-size: 40px;
+      }
+
+      .grid-circle {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3px;
+        margin-left: 591px;
+        margin-top: -30px;
+        margin-bottom: 18px;
+      }
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #c5117d;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+    }
+  </style>
+
+  <script>
+    (function () {
+      const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+      let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "02/18/",
+        birthday = dayMonth + nextYear; // Use nextYear here
+
+      const countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+          const now = new Date().getTime(),
+            distance = countDown - now;
+
+          if (distance < 0) {
+            // If the countdown date has passed, set it to the next year
+            const nextBirthday = new Date(dayMonth + (nextYear + 1)).getTime();
+            const nextDistance = nextBirthday - now;
+            document.getElementById("days").innerHTML = String(Math.floor(nextDistance / day));
+            document.getElementById("hours").innerHTML = String(Math.floor((nextDistance % day) / hour));
+            document.getElementById("minutes").innerHTML = String(Math.floor((nextDistance % hour) / minute));
+            document.getElementById("seconds").innerHTML = String(Math.floor((nextDistance % minute) / second));
+          } else {
+            // Countdown for the current year
+            document.getElementById("days").innerHTML = String(Math.floor(distance / day));
+            document.getElementById("hours").innerHTML = String(Math.floor((distance % day) / hour));
+            document.getElementById("minutes").innerHTML = String(Math.floor((distance % hour) / minute));
+            document.getElementById("seconds").innerHTML = String(Math.floor((distance % minute) / second));
+          }
+        }, 1000);
+    })();
+  </script>
+</div>

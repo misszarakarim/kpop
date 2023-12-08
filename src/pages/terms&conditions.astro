@@ -2,6 +2,7 @@
 import "../global_css/style.css";
 import Foldud from "../components/Foldud.astro";
 import Textbox from "../components/Textbox.astro";
+import Countdown from "../components/Countdown.astro";
 const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
 ---
 
@@ -14,8 +15,7 @@ const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
-
+    <Countdown />
     <Textbox title="General information" text="TheKorner \n CVR nr.: DK41033525" />
 
     <Foldud color={boxColors[0]} title="Price" text="At TheKorner, we reserve the right for any errors in our stated prices. Furthermore, we reserve the right to change the prices without prior consent. Reservations are made for out-of-stock items" />
