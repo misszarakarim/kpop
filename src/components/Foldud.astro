@@ -46,7 +46,7 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
     display: flex;
     width: 100%;
     color: #c5117d;
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -103,6 +103,18 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
 
     ~ .accordion-item-title .icon {
       background-image: url(arrow.svg);
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .accordion-item-title {
+      font-size: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .accordion-item-title {
+      font-size: 40px;
     }
   }
 </style>
