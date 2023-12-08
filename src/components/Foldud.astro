@@ -1,0 +1,120 @@
+---
+// Uddrag af egenskaber i form af konstanter
+const { title, text, color } = Astro.props;
+
+// Generer en unik ID til afkrydsningsfeltet
+const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
+---
+
+<!-- Generer en unik ID til afkrydsningsfeltet -->
+<div class="accordion">
+  <div class="accordion-item" style={`background-color: ${color};`} ;>
+    <input type="checkbox" id={checkboxId} class="accordion-checkbox" />
+    <label for={checkboxId} class="accordion-item-title"><span class="icon"></span>{title}</label>
+    <!-- Opdeler tekst ved ny linje og mapper til afsnit  -->
+    <div class="accordion-item-desc">
+      {text.split("\n").map((paragraph, index) => <p>{paragraph}</p>)}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* KUN EN STYLING FOR ALLE SKÆRMSTØRRELSER */
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    max-width: 991px;
+    min-width: 320px;
+    margin: 50px auto;
+  }
+
+  /* Styling for individuelle accordion-elementer */
+  .accordion-item {
+    margin-top: 10px;
+    border: 3px solid #c5117d;
+    border-radius: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  /* Styling for overskrifterne */
+  .accordion-item-title {
+    position: relative;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    color: #c5117d;
+    font-size: 32px;
+    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 5px 40px 5px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Styling for pilene */
+  .icon {
+    margin-left: 20px;
+    width: 33px;
+    height: 28px;
+    aspect-ratio: 70/64;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
+  }
+
+  /* Styling for tekstbeskrivelsen */
+  .accordion-item-desc {
+    display: none;
+    font-size: 14px;
+    line-height: 32px;
+    color: #400027;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    white-space: pre-line;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  /* Styling for checkbox-inputtet */
+  input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+    &:checked {
+      ~ .accordion-item-desc {
+        display: block;
+      }
+
+      ~ .accordion-item-title .icon {
+        background-image: url(arrow.svg);
+        transform: rotate(-90deg);
+      }
+    }
+
+    ~ .accordion-item-title .icon {
+      background-image: url(arrow.svg);
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .accordion-item-title {
+      font-size: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .accordion-item-title {
+      font-size: 40px;
+    }
+  }
+</style>
