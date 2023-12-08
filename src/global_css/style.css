@@ -36,6 +36,15 @@ label {
     font-family: "zcool";
 }
 
+h1,
+h2,
+h3,
+h4 {
+    color: #C5117D;
+}
+
+
 p {
     font-family: "chivo-light";
+    color: #400027;
 }
