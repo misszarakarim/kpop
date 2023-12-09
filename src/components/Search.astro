@@ -1,0 +1,61 @@
+<div>
+  <h2>SEARCH</h2>
+  <div class="dot"></div>
+</div>
+
+<style>
+  .dot {
+    border-top: 3px dashed #e596cb;
+    height: 25px;
+    width: 91%;
+  }
+
+  /* Style for the search button */
+
+  #searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #ad94e0;
+    border-radius: 5px;
+    outline: none;
+    width: 190px; /* Adjust the width as needed */
+  }
+
+  .search-button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ad94e0;
+    color: #f5f5f5;
+    margin-left: 5%;
+  }
+
+  /* Optional: Add some styles for better appearance */
+  .search-button:hover {
+    background-color: #f5f5f5;
+  }
+
+  .search-button:focus {
+    border-color: #000000;
+  }
+</style>
+
+<title>Search Button</title>
+
+<body>
+  <input type="text" id="searchInput" placeholder="SEARCH PRODUCT" />
+  <button class="search-button" onclick="
+  performSearch()
+  ">SEARCH</button>
+
+  <!-- Optional: You can add a script for the search functionality -->
+  <script>
+    function performSearch() {
+      var searchInputValue = document.getElementById("searchInput").value;
+      alert("Searching for: " + searchInputValue);
+    }
+  </script>
+</body>
+
