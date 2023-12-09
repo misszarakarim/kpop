@@ -1,0 +1,23 @@
+---
+import "../global_css/style.css";
+import ListeBox from "../components/ListeBox.astro";
+import Search from "../components/Search.astro";
+import Knap from "../components/Knap.astro";
+("../components/ListeBox.astro");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Search />
+    <Knap />
+    <ListeBox />
+  </body>
+  <style></style>
+</html>

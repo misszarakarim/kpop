@@ -1,0 +1,55 @@
+<div class="bb">
+  <button class="button1">ALBUMS</button>
+  <button class="button2">POSTERS</button>
+  <button class="button3">PHOTOCARDS</button>
+  <button class="button4">ACCESSORIES</button>
+  <button class="button5">STATIONERY</button>
+</div>
+
+<style>
+  .bb {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 37vh;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 6%;
+  }
+
+  button {
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #c5117d;
+    border-radius: 30px;
+  }
+
+  .button1 {
+    background-color: #fac2c9;
+  }
+
+  .button2 {
+    background-color: #d4c2fa;
+  }
+
+  .button3 {
+    background-color: #f9fac2;
+  }
+
+  .button4 {
+    background-color: #d4fac2;
+  }
+
+  .button5 {
+    grid-column: 1 / span 2;
+    background-color: #c2dcfa;
+    margin-top: 3%;
+    margin-left: 25%;
+  }
+</style>
