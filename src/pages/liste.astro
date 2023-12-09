@@ -1,8 +1,11 @@
 ---
 import "../global_css/style.css";
+import BigBox from "../components/BigBox.astro";
 import ListeBox from "../components/ListeBox.astro";
 import Search from "../components/Search.astro";
 import Knap from "../components/Knap.astro";
+import ListeText from "../components/ListeText.astro";
+import Nav from "../components/Nav.astro";
 ("../components/ListeBox.astro");
 ---
 
@@ -15,6 +18,9 @@ import Knap from "../components/Knap.astro";
     <title>Astro</title>
   </head>
   <body>
+    <Nav />
+    <BigBox />
+    <ListeText />
     <Search />
     <Knap />
     <ListeBox />
