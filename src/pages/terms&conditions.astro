@@ -16,7 +16,19 @@ const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
   </head>
   <body>
     <Countdown />
-    <Textbox title="General information" text="TheKorner   CVR nr.: DK41033525" />
+    <Textbox title="General information">
+      <br />
+      <p>
+        TheKorner
+        <br />
+        <br />
+         CVR nr.: DK41033525"
+        <br />
+        <br />
+        <a href="mailto: kontakt@the-korner.com">Kontakt@the-korner.com</a>
+        <br />
+      </p>
+    </Textbox>
 
     <Foldud color={boxColors[0]} title="Price"><p>At TheKorner, we reserve the right for any errors in our stated prices. Furthermore, we reserve the right to change the prices without prior consent. Reservations are made for out-of-stock items</p></Foldud>
     <Foldud color={boxColors[1]} title="Payment">
@@ -116,6 +128,7 @@ const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
   }
 
   a {
+    font-size: 1.3em;
     color: #63469e;
   }
 </style>

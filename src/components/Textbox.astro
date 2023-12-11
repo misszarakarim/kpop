@@ -4,10 +4,7 @@ const { title, text } = Astro.props;
 
 <div>
   <h3>{title}</h3>
-  <p>
-    {text.split("\n").map((paragraph, index) => <p>{paragraph}</p>)}
-    <a href="mailto: kontakt@the-korner.com">Kontakt@the-korner.com</a>
-  </p>
+  <slot />
 </div>
 
 <style>
