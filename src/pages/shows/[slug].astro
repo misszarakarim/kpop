@@ -1,12 +1,11 @@
 ---
 export async function getStaticPaths() {
-  const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1",{
-	method:"GET",
-	headers: {
-apikey: 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro"
-	},
-}).then(response => response.json());
+  const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro",
+    },
+  }).then((response) => response.json());
 
   return data.map((show) => {
     return {
@@ -18,5 +17,32 @@ apikey:
 
 const { myData } = Astro.props;
 console.log(myData);
-
 ---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{myData.slug}</title>
+  </head>
+  <body>
+    <h1>{myData.categories}</h1>
+    <img class="img1" src={myData.img1} alt="#" />
+    <img class="img2" src={myData.img2} alt="#" />
+    <article class="info">
+      <h4>{myData.name}</h4>
+      <p class="hvem">Af: {myData.name}</p>
+      <p class="price">{myData.price}</p>
+      <hr />
+      <p>Free shipping in Denmark on orders over 499 kr</p>
+      <p>We ship to EU, UK OG US from Denmark</p>
+      <p>Tags: {myData.tags}</p>
+      <hr />
+      <p>CATEGORIES: {myData.categories}</p>
+      <p>DESCRIPTION: {myData.bio}</p>
+      <p>ADDITIONAL INFOMATION: {myData.ai}</p>
+    </article>
+  </body>
+</html>
