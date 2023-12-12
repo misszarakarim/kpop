@@ -2,6 +2,8 @@
 import "../global_css/style.css";
 import Foldud from "../components/Foldud.astro";
 import Textbox from "../components/Textbox.astro";
+import BigBox from "../components/BigBox.astro";
+import Footer from "../components/Footer.astro";
 const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
 ---
 
@@ -14,6 +16,8 @@ const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
     <title>Astro</title>
   </head>
   <body>
+    <BigBox boxtitle="Terms & conditions" boxtext="Home/Terms & conditions" />
+
     <Textbox title="General information">
       <br />
       <p>
@@ -116,6 +120,7 @@ const boxColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
         <a href="mailto:  kontakt@the-korner.com"> kontakt@the-korner.com</a>
       </p>
     </Foldud>
+    <Footer />
   </body>
 </html>
 
