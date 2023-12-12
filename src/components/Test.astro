@@ -1,0 +1,299 @@
+<div id="wrap">
+  <nav>
+    <div class="logo">
+      <a href="/">Logo here</a>
+    </div>
+    <div class="menu-container">
+      <button type="button" class="btn-hamburger" data-action="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item dropdown">
+          <a href="#" data-action="dropdown-toggle">Kpop</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="groups" href="#" data-action="dropdown-toggle">Groups</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="recycle" href="#" data-action="dropdown-toggle">Recycle</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="artist" href="#" data-action="dropdown-toggle">Artist</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="other" href="#" data-action="dropdown-toggle">Other</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<style>
+  nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background-color: #ffbad3;
+    color: #c5117d;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -1%;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    border: 4px #c5117d solid;
+    z-index: 12;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    margin-top: 25px;
+    margin-left: 46px;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    flex-grow: 1;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    margin-right: 44%;
+    list-style: none;
+  }
+
+  .nav-item {
+  }
+
+  .btn-hamburger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px; /* Adjust as needed */
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item > a {
+    padding: 0 1.5em;
+    color: #c5117d;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+  }
+
+  .nav-item > a:hover::after {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    border-radius: 10px;
+    margin-bottom: -12px;
+  }
+
+  .nav-item.kpop > a:hover::after {
+    background-color: #fac2c9;
+  }
+
+  .nav-item.groups > a:hover::after {
+    background-color: #c2dcfa;
+  }
+
+  .nav-item.recycle > a:hover::after {
+    background-color: #d4fac2;
+  }
+
+  .nav-item.artist > a:hover::after {
+    background-color: #f9fac2;
+  }
+
+  .nav-item.other > a:hover::after {
+    background-color: #d4c2fa;
+  }
+
+  nav .dropdown {
+    position: relative;
+  }
+  nav .dropdown a::after {
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    border-top: 0.3em solid #fff;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+  }
+  nav .dropdown.show a::after {
+    transform: rotate(180deg);
+  }
+  nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 0.5em 0;
+    margin-top: -0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    background-color: #fff;
+  }
+  nav .dropdown.show .dropdown-menu {
+    display: block;
+  }
+  nav .dropdown-item {
+    display: block;
+    padding: 0 1.5em;
+    font-size: 0.875em;
+    color: #000;
+    line-height: 3;
+    text-decoration: none;
+  }
+  nav .btn-hamburger {
+    display: none;
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-50%);
+  }
+  nav .btn-hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--line-banner);
+    margin: 6px;
+    border-radius: 2px;
+    transition: 0.3s ease-in-out;
+  }
+  nav .btn-hamburger span:nth-child(4),
+  nav .btn-hamburger span:nth-child(5) {
+    position: absolute;
+    top: 10px;
+    opacity: 0.5;
+  }
+  nav .btn-hamburger span:nth-child(4) {
+    transform: rotate(45deg) scale(0);
+  }
+  nav .btn-hamburger span:nth-child(5) {
+    transform: rotate(-45deg) scale(0);
+  }
+  nav.opened .btn-hamburger span:nth-child(4) {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+  nav.opened .btn-hamburger span:nth-child(5) {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+  }
+  nav.opened .btn-hamburger span:nth-child(1),
+  nav.opened .btn-hamburger span:nth-child(2),
+  nav.opened .btn-hamburger span:nth-child(3) {
+    opacity: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav .nav-menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 70px;
+      bottom: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+      background-image: url(/img/cphlfbackground.png);
+      background-size: cover;
+      transition: bottom 0.5s ease-in-out;
+      overflow: hidden;
+    }
+
+    nav.opened .nav-menu {
+      bottom: 0;
+    }
+
+    nav .nav-item > a {
+      display: block;
+      text-align: left; /* Left-align the navigation items */
+    }
+
+    nav .nav-item > a:hover {
+      color: var(--text-beige);
+    }
+
+    nav .dropdown-menu {
+      position: relative;
+      top: 0;
+      margin: 0 1.5em;
+    }
+
+    nav .btn-hamburger {
+      display: block;
+    }
+
+    .logo {
+      width: 70%;
+      display: flex;
+    }
+
+    .dk {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 10px;
+    }
+
+    nav .dropdown {
+      position: absolute;
+    }
+  }
+</style>
+
+<script>
+  let nav = document.querySelector("nav");
+  let dropdown = nav.querySelector(".dropdown");
+  let dropdownToggle = nav.querySelector("[data-action='dropdown-toggle']");
+  let navToggle = nav.querySelector("[data-action='nav-toggle']");
+
+  dropdownToggle.addEventListener("click", () => {
+    if (dropdown.classList.contains("show")) {
+      dropdown.classList.remove("show");
+    } else {
+      dropdown.classList.add("show");
+    }
+  });
+
+  navToggle.addEventListener("click", () => {
+    if (nav.classList.contains("opened")) {
+      nav.classList.remove("opened");
+    } else {
+      nav.classList.add("opened");
+    }
+  });
+</script>

@@ -50,14 +50,15 @@
   .nav-list li {
     margin-right: 55px;
   }
-
-  .nav-list a {
-    text-decoration: none;
+  .nav-list li > a {
+    padding: 0 1.5em;
     color: #c5117d;
-    position: relative;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative; /* Ensure the relative positioning for absolute pseudo-element */
   }
 
-  .nav-list a:hover::after {
+  .nav-list li > a:hover::after {
     content: "";
     display: block;
     height: 4px;
@@ -70,42 +71,48 @@
     margin-bottom: -12px;
   }
 
-  .nav-list .kpop:hover::after {
+  .nav-list .kpop > a:hover::after {
     background-color: #fac2c9;
   }
 
-  .nav-list .groups:hover::after {
+  .nav-list .groups > a:hover::after {
     background-color: #c2dcfa;
   }
 
-  .nav-list .recycle:hover::after {
+  .nav-list .recycle > a:hover::after {
     background-color: #d4fac2;
   }
 
-  .nav-list .artist:hover::after {
+  .nav-list .artist > a:hover::after {
     background-color: #f9fac2;
   }
 
-  .nav-list .other:hover::after {
+  .nav-list .other > a:hover::after {
     background-color: #d4c2fa;
   }
 
   .burger-menu {
-    font-size: 24px;
+    font-size: 48px;
     cursor: pointer;
     display: none;
+    position: absolute;
+    top: 3px;
+    right: 46px;
   }
 
   @media only screen and (max-width: 768px) {
     .nav-list {
-      display: none;
       flex-direction: column;
       position: absolute;
       top: 60px;
-      left: 0;
-      background-color: #333;
+      right: 0;
+      background-color: #ffbad3;
       width: 100%;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+      border-bottom-left-radius: 64px;
+      border-bottom-right-radius: 64px;
+      border: 4px #c5117d solid;
     }
 
     .nav-list.show {
