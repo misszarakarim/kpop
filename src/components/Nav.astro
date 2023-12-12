@@ -22,8 +22,9 @@
     justify-content: space-between;
     align-items: center;
     margin: -1%;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    border: 4px #c5117d solid;
   }
 
   .logo {
@@ -56,11 +57,10 @@
     position: relative;
   }
 
-  .nav-list .kpop:hover::after {
+  .nav-list a:hover::after {
     content: "";
     display: block;
     height: 4px;
-    background-color: #fac2c9; /* Change this to your desired underline color */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -68,62 +68,26 @@
     border: 3px solid #c5117d;
     border-radius: 10px;
     margin-bottom: -12px;
+  }
+
+  .nav-list .kpop:hover::after {
+    background-color: #fac2c9;
   }
 
   .nav-list .groups:hover::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background-color: #c2dcfa; /* Change this to your desired underline color */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 110%;
-    border: 3px solid #c5117d;
-    border-radius: 10px;
-    margin-bottom: -12px;
+    background-color: #c2dcfa;
   }
 
   .nav-list .recycle:hover::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background-color: #d4fac2; /* Change this to your desired underline color */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 110%;
-    border: 3px solid #c5117d;
-    border-radius: 10px;
-    margin-bottom: -12px;
+    background-color: #d4fac2;
   }
 
   .nav-list .artist:hover::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background-color: #f9fac2; /* Change this to your desired underline color */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 110%;
-    border: 3px solid #c5117d;
-    border-radius: 10px;
-    margin-bottom: -12px;
+    background-color: #f9fac2;
   }
 
   .nav-list .other:hover::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background-color: #d4c2fa; /* Change this to your desired underline color */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 110%;
-    border: 3px solid #c5117d;
-    border-radius: 10px;
-    margin-bottom: -12px;
+    background-color: #d4c2fa;
   }
 
   .burger-menu {
