@@ -106,33 +106,38 @@
   .nav-item > a:hover::before {
     content: "";
     display: block;
-    height: 2px; /* Adjust the height as needed */
+    height: 4px;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Change to 110% if you want it to extend slightly beyond the text */
-    background-color: #c5117d; /* Change to your desired color */
-    border-bottom: 2px solid #fff;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: -12px;
   }
 
-  .nav-item.kpop > a:hover {
+  .nav-item.kpop > a:hover::before {
     background-color: #fac2c9;
+    border: 3px solid #c5117d;
   }
 
-  .nav-item.groups > a:hover {
+  .nav-item.groups > a:hover::before {
     background-color: #c2dcfa;
+    border: 3px solid #c5117d;
   }
 
-  .nav-item.recycle > a:hover {
+  .nav-item.recycle > a:hover::before {
     background-color: #d4fac2;
+    border: 3px solid #c5117d;
   }
 
-  .nav-item.artist > a:hover {
+  .nav-item.artist > a:hover::before {
     background-color: #f9fac2;
+    border: 3px solid #c5117d;
   }
 
-  .nav-item.other > a:hover {
+  .nav-item.other > a:hover::before {
     background-color: #d4c2fa;
+    border: 3px solid #c5117d;
   }
 
   nav .dropdown {
