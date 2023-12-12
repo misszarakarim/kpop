@@ -2,11 +2,11 @@
   <div class="logo">Your Logo</div>
   <nav>
     <ul class="nav-list">
-      <li><a href="#">Kpop</a></li>
-      <li><a href="#">Groups</a></li>
-      <li><a href="#">Recycle</a></li>
-      <li><a href="#">Artist</a></li>
-      <li><a href="#">Other</a></li>
+      <li><a class="kpop" href="#">Kpop</a></li>
+      <li><a class="groups" href="#">Groups</a></li>
+      <li><a class="recycle" href="#">Recycle</a></li>
+      <li><a class="artist" href="#">Artist</a></li>
+      <li><a class="other" href="#">Other</a></li>
     </ul>
     <div class="burger-menu">&#9776;</div>
   </nav>
@@ -17,11 +17,13 @@
   header {
     background-color: #ffbad3;
     color: #c5117d;
-    padding: 10px;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: -1%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 
   .logo {
@@ -54,11 +56,67 @@
     position: relative;
   }
 
-  .nav-list a:hover::after {
+  .nav-list .kpop:hover::after {
     content: "";
     display: block;
     height: 4px;
-    background-color: #6ed3f2; /* Change this to your desired underline color */
+    background-color: #fac2c9; /* Change this to your desired underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    border: 3px solid #c5117d;
+    border-radius: 10px;
+    margin-bottom: -12px;
+  }
+
+  .nav-list .groups:hover::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #c2dcfa; /* Change this to your desired underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    border: 3px solid #c5117d;
+    border-radius: 10px;
+    margin-bottom: -12px;
+  }
+
+  .nav-list .recycle:hover::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #d4fac2; /* Change this to your desired underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    border: 3px solid #c5117d;
+    border-radius: 10px;
+    margin-bottom: -12px;
+  }
+
+  .nav-list .artist:hover::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #f9fac2; /* Change this to your desired underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    border: 3px solid #c5117d;
+    border-radius: 10px;
+    margin-bottom: -12px;
+  }
+
+  .nav-list .other:hover::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #d4c2fa; /* Change this to your desired underline color */
     position: absolute;
     bottom: 0;
     left: 0;
