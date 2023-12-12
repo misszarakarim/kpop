@@ -13,20 +13,18 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
     <label for={checkboxId} class="accordion-item-title"><span class="icon"></span>{title}</label>
     <!-- Opdeler tekst ved ny linje og mapper til afsnit  -->
     <div class="accordion-item-desc">
-      {text.split("\n").map((paragraph, index) => <p>{paragraph}</p>)}
+      <slot />
     </div>
   </div>
 </div>
 
 <style>
-  /* KUN EN STYLING FOR ALLE SKÆRMSTØRRELSER */
-
   .accordion {
     display: flex;
     flex-direction: column;
     max-width: 991px;
     min-width: 320px;
-    margin: 50px auto;
+    margin: 50px 20px;
   }
 
   /* Styling for individuelle accordion-elementer */
@@ -115,6 +113,10 @@ const checkboxId = `accordion-${Math.floor(Math.random() * 1000)}`;
   @media only screen and (min-width: 1024px) {
     .accordion-item-title {
       font-size: 40px;
+    }
+
+    .accordion {
+      margin: 40px 190px;
     }
   }
 </style>

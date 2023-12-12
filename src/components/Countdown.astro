@@ -1,0 +1,266 @@
+---
+
+---
+
+<div class="grid-item">
+  <h3>Countdown for next event</h3>
+  <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+  <div class="countdown"></div>
+  <ul>
+    <li><span id="days"></span>days</li>
+    <li><span id="hours"></span>Hours</li>
+    <li><span id="minutes"></span>Minutes</li>
+    <li><span id="seconds"></span>Seconds</li>
+  </ul>
+</div>
+
+<style>
+  .grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #c5117d;
+    background-color: #c2dcfa;
+    padding: 12px;
+    padding-top: 56px;
+    text-align: center;
+    border-radius: 21px;
+    margin: auto 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-right: 90px;
+    white-space: nowrap;
+    position: absolute;
+    top: 16px;
+  }
+
+  .countdown {
+    position: relative;
+    border: 3px solid #c5117d;
+    border-radius: 24px;
+    background-color: #fff;
+    padding: 80px 140px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    color: #c5117d;
+    text-align: center;
+    position: absolute;
+    top: 54%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  li {
+    display: inline-block;
+    font-family: "zcool", sans-serif;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  li span {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 40px;
+  }
+
+  .grid-circle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    margin-left: 199px;
+    margin-top: -39px;
+    margin-bottom: 12px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+  }
+
+  .circle1 {
+    background-color: #b1fef5; /* Color for the first circle */
+  }
+
+  .circle2 {
+    background-color: #c8ffa7; /* Color for the second circle */
+  }
+
+  .circle3 {
+    background-color: #ff6f9c; /* Color for the third circle */
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid #c5117d;
+      background-color: #c2dcfa;
+      padding: 12px;
+      padding-top: 56px;
+      text-align: center;
+      border-radius: 21px;
+      margin: auto 32px;
+    }
+
+    h3 {
+      font-size: 36px;
+      margin-right: 297px;
+      margin-bottom: 10px;
+    }
+
+    .countdown {
+      padding: 80px 350px;
+    }
+
+    ul {
+      gap: 44px;
+      position: absolute;
+      top: 40%;
+      left: 48%;
+    }
+
+    li {
+      margin-bottom: -43px;
+      font-size: 24px;
+    }
+
+    li span {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 88px;
+    }
+
+    .grid-circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px;
+      margin-left: 591px;
+      margin-top: -30px;
+      margin-bottom: 18px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #c5117d;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .grid-item {
+      margin: auto 36px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-right: 540px;
+      margin-top: -12px;
+      white-space: nowrap;
+      position: absolute;
+      top: 24px;
+    }
+
+    .countdown {
+      padding: 80px 430px;
+    }
+
+    ul {
+      gap: 44px;
+      position: absolute;
+      top: 40%;
+      left: 48%;
+    }
+
+    li {
+      margin-bottom: -43px;
+      font-size: 24px;
+    }
+
+    li span {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 88px;
+    }
+
+    .grid-circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px;
+      margin-left: 745px;
+      margin-top: -30px;
+      margin-bottom: 21px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #c5117d;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = 2022 + 1,
+      dayMonth = "12/18/",
+      birthday = dayMonth + nextYear; // Use nextYear here
+
+    const countDown = new Date(birthday).getTime(),
+      x = setInterval(function () {
+        const now = new Date().getTime(),
+          distance = countDown - now;
+
+        if (distance < 0) {
+          // If the countdown date has passed, set it to the next year
+          const nextBirthday = new Date(dayMonth + (nextYear + 1)).getTime();
+          const nextDistance = nextBirthday - now;
+          document.getElementById("days").innerHTML = String(Math.floor(nextDistance / day));
+          document.getElementById("hours").innerHTML = String(Math.floor((nextDistance % day) / hour));
+          document.getElementById("minutes").innerHTML = String(Math.floor((nextDistance % hour) / minute));
+          document.getElementById("seconds").innerHTML = String(Math.floor((nextDistance % minute) / second));
+        } else {
+          // Countdown for the current year
+          document.getElementById("days").innerHTML = String(Math.floor(distance / day));
+          document.getElementById("hours").innerHTML = String(Math.floor((distance % day) / hour));
+          document.getElementById("minutes").innerHTML = String(Math.floor((distance % hour) / minute));
+          document.getElementById("seconds").innerHTML = String(Math.floor((distance % minute) / second));
+        }
+      }, 1000);
+  })();
+</script>
