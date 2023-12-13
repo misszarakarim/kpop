@@ -6,17 +6,23 @@
     <div class="circle circle3"></div>
   </div>
   <div class="gallery">
-    <div class="imgbox">
+    <div class="imgbox" style="    background-color: #9fd7f5;
+    ">
       <h3 style="color: #005FD7;">Groups</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
     </div>
-    <div class="imgbox">
+    <div class="imgbox" style="    background-color: #bbf5de;">
       <h3 style="color: #00D77B;">Recycle</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
     </div>
-    <div class="imgbox">
+    <div class="imgbox" style="    background-color: #ffedac;    ">
       <h3 style="color: #ffc52a;">Artist</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
     </div>
-    <div class="imgbox">
+    <div class="imgbox" style="    background-color: hsl(282, 71%, 86%);
+    ">
       <h3 style="color: #9B13D7;">Other</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
     </div>
   </div>
 </div>
@@ -52,41 +58,17 @@
     border-style: solid;
     border-color: #c5117d;
     border-radius: 20px;
-    background-color: #9fd7f5;
-    background-image: url("../../public/img/placeholderwelcome.png");
+    overflow: hidden;
+    position: relative;
+  }
+
+  img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    position: absolute;
+    bottom: 0;
   }
-
-  .imgbox:nth-child(2) {
-    background: url("../../public/img/placeholderwelcome.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: #bbf5de;
-  }
-
-  .imgbox:nth-child(3) {
-    background: url("../../public/img/placeholderwelcome.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: #ffedac;
-  }
-
-  .imgbox:nth-child(4) {
-    background: url("../../public/img/placeholderwelcome.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: hsl(282, 71%, 86%);
-  }
-
-  /* .imgbox:hover {
-    width: 1000px;
-    cursor: pointer;
-  } */
 
   h1 {
     display: grid;
@@ -150,12 +132,33 @@
     h3 {
       font-size: 30px;
       margin-top: 30px;
-      font-size: 30px;
     }
 
     h1 {
       font-size: 30px;
       margin-top: 20px;
+    }
+  }
+
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+    .container {
+      height: 580px;
+    }
+
+    .imgbox {
+      height: 480px;
+    }
+
+    h3 {
+      font-size: 50px;
+      margin-top: 30px;
+    }
+
+    .imgbox:hover {
+      width: 2200px;
+      cursor: pointer;
     }
   }
 </style>
