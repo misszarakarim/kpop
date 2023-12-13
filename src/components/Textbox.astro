@@ -4,10 +4,7 @@ const { title, text } = Astro.props;
 
 <div>
   <h3>{title}</h3>
-  <p>
-    {text.split("\n").map((paragraph, index) => <p>{paragraph}</p>)}
-    <a href="mailto: kontakt@the-korner.com">Kontakt@the-korner.com</a>
-  </p>
+  <slot />
 </div>
 
 <style>
@@ -15,8 +12,8 @@ const { title, text } = Astro.props;
   div {
     border: dashed 3px #e596cb;
     border-radius: 32px;
-    padding: 8px 24px;
-    margin: 2px auto;
+    padding: 38px 24px;
+    margin: 52px 50px;
     text-align: left;
     transition: margin 0.3s ease;
   }
@@ -34,23 +31,23 @@ const { title, text } = Astro.props;
   }
 
   a {
-    color: #c5117d;
+    color: #63469e;
     margin-left: 1.8em;
   }
 
   /* TABLET STYLING */
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     div {
-      margin: 2px 25%;
-      text-align: left;
+      padding: 38px 84px;
+      margin: 52px 190px;
     }
   }
 
   /* DESKTOP STYLING */
   @media only screen and (min-width: 1024px) {
     div {
-      margin: 2px 32%;
-      text-align: left;
+      padding: 38px 84px;
+      margin: 52px 190px;
     }
 
     h3 {
