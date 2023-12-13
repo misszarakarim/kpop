@@ -6,7 +6,13 @@
   <button class="button5">STATIONERY</button>
 </div>
 
+<img class="pink" src="../public/img/pinkstreg.png" alt="" />
+
 <style>
+  .pink {
+    display: none;
+  }
+
   .bb {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -15,9 +21,10 @@
     height: 37vh;
     align-items: center;
     justify-content: center;
-    padding-left: 5%;
+    padding-left: 7%;
     padding-top: 10%;
     padding-bottom: 6%;
+    margin-bottom: 8%;
   }
 
   button {
@@ -32,10 +39,12 @@
 
   .button1 {
     background-color: #fac2c9;
+    margin-bottom: 10%;
   }
 
   .button2 {
     background-color: #d4c2fa;
+    margin-bottom: 10%;
   }
 
   .button3 {
@@ -49,7 +58,80 @@
   .button5 {
     grid-column: 1 / span 2;
     background-color: #c2dcfa;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: 25%;
+  }
+
+  /* TABLET */
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .pink[data-astro-cid-jjeidbrj] {
+      width: 30%;
+      position: absolute;
+      top: 62%;
+      left: 1%;
+      z-index: -1;
+      display: block;
+    }
+
+    .bb[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0%;
+      margin-bottom: 13%;
+      margin-right: 79%;
+      margin-top: 10%;
+      gap: 38px;
+      height: 67vh;
+    }
+
+    button[data-astro-cid-jjeidbrj] {
+      width: 172px;
+      height: 62px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border: 3px solid #c5117d;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    .button1 {
+      background-color: #fac2c9;
+    }
+
+    .button2 {
+      background-color: #d4c2fa;
+      margin-top: -15%;
+    }
+
+    .button3 {
+      background-color: #f9fac2;
+      margin-top: -15%;
+    }
+
+    .button4 {
+      background-color: #d4fac2;
+      margin-top: -16%;
+    }
+
+    .button5[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+      grid-column: 1 / span 2;
+      background-color: #c2dcfa;
+      margin-top: -16%;
+      margin-left: 1%;
+    }
+
+
+
+
+
+
+
+
+
+    
   }
 </style>
