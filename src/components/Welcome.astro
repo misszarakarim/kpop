@@ -7,16 +7,16 @@
   </div>
   <div class="gallery">
     <div class="imgbox">
-      <h3>tbp</h3>
+      <h3 style="color: #005FD7;">Groups</h3>
     </div>
     <div class="imgbox">
-      <h3>tbp</h3>
+      <h3 style="color: #00D77B;">Recycle</h3>
     </div>
     <div class="imgbox">
-      <h3>tbp</h3>
+      <h3 style="color: #ffc52a;">Artist</h3>
     </div>
     <div class="imgbox">
-      <h3>tbp</h3>
+      <h3 style="color: #9B13D7;">Other</h3>
     </div>
   </div>
 </div>
@@ -24,67 +24,69 @@
 <style>
   /*MOBIL*/
   .container {
-    width: 322px;
+    width: 95%;
     height: 216px;
     background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
     align-items: center;
     justify-content: center;
     border: 3px solid #c5117d;
-    border-radius: 37px;
+    border-radius: 25px;
     display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    margin: 2%;
   }
+
   .gallery {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: 1 / 3;
-    grid-row: 2;
+    grid-column: 1 /3;
+    margin: 0 10px 5px 10px;
   }
 
   .imgbox {
-    width: 100px;
-    height: 500px;
-    margin: 10px;
-    border-radius: 50px;
-    background: url();
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    transition: wdith 0.5s;
+    width: 100%;
+    height: 170px;
+    border-style: solid;
+    border-color: #c5117d;
+    border-radius: 20px;
+    background-color: #9fd7f5;
+    background-image: url("../../public/img/placeholderwelcome.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   .imgbox:nth-child(2) {
-    background: url();
-    background-size: cover;
-    background-position: center;
+    background: url("../../public/img/placeholderwelcome.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #bbf5de;
   }
 
   .imgbox:nth-child(3) {
-    background: url();
-    background-size: cover;
-    background-position: center;
+    background: url("../../public/img/placeholderwelcome.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #ffedac;
   }
 
   .imgbox:nth-child(4) {
-    background: url();
-    background-size: cover;
-    background-position: center;
+    background: url("../../public/img/placeholderwelcome.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: hsl(282, 71%, 86%);
   }
 
-  .imgbox h3 {
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 30px;
-  }
-
-  .imgbox:hover {
-    width: 300px;
+  /* .imgbox:hover {
+    width: 1000px;
     cursor: pointer;
-  }
+  } */
 
   h1 {
     display: grid;
@@ -92,6 +94,15 @@
     grid-row: 1;
     font-size: 20px;
     white-space: nowrap;
+    align-self: start;
+    margin: 2px 20px;
+  }
+
+  h3 {
+    transform: rotate(-20deg);
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
   }
 
   .grid-circle {
@@ -101,11 +112,12 @@
     grid-row: 1;
     justify-self: end;
     align-self: start;
+    margin: 10px 15px;
   }
 
   .circle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     display: flex;
     align-items: center;
