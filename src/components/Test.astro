@@ -79,9 +79,6 @@
     list-style: none;
   }
 
-  .nav-item {
-  }
-
   .btn-hamburger {
     background-color: transparent;
     border: 0;
@@ -143,29 +140,11 @@
   nav .dropdown {
     position: relative;
   }
-  nav .dropdown a::after {
-    display: inline-block;
-    margin-left: 0.5em;
-    vertical-align: middle;
-    border-top: 0.3em solid #fff;
-    border-right: 0.3em solid transparent;
-    border-left: 0.3em solid transparent;
-  }
+
   nav .dropdown.show a::after {
     transform: rotate(180deg);
   }
-  nav .dropdown-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    padding: 0.5em 0;
-    margin-top: -0.5em;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 0.5em;
-    background-color: #fff;
-  }
+
   nav .dropdown.show .dropdown-menu {
     display: block;
   }
@@ -187,12 +166,13 @@
     cursor: pointer;
     outline: none;
     transform: translateY(-50%);
+    z-index: 99999;
   }
   nav .btn-hamburger span {
     display: block;
     width: 30px;
     height: 4px;
-    background-color: var(--line-banner);
+    background-color: #c5117d;
     margin: 6px;
     border-radius: 2px;
     transition: 0.3s ease-in-out;
@@ -223,20 +203,22 @@
     opacity: 0;
   }
 
-  @media screen and (max-width: 768px) {
+  /* TABLET STYLING */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     nav .nav-menu {
       position: fixed;
       left: 0;
       right: 0;
-      top: 70px;
+      top: 0;
       bottom: 100%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align items to the left */
-      background-image: url(/img/cphlfbackground.png);
-      background-size: cover;
+      align-items: center;
+      background-color: #ffbad3;
       transition: bottom 0.5s ease-in-out;
       overflow: hidden;
+      width: 100%;
+      font-size: 1.5rem;
     }
 
     nav.opened .nav-menu {
@@ -245,17 +227,27 @@
 
     nav .nav-item > a {
       display: block;
-      text-align: left; /* Left-align the navigation items */
+      text-align: right;
+      margin-top: 96px;
+      font-size: 2.5rem;
     }
 
     nav .nav-item > a:hover {
-      color: var(--text-beige);
+      color: #c5117d;
     }
 
     nav .dropdown-menu {
-      position: relative;
-      top: 0;
-      margin: 0 1.5em;
+      left: auto;
+      right: 0;
+      padding: 1em; /* Adjust padding for better touch interaction */
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+      display: none;
+    }
+
+    nav .nav-item:hover .dropdown-menu {
+      display: block;
     }
 
     nav .btn-hamburger {
@@ -267,15 +259,94 @@
       display: flex;
     }
 
-    .dk {
-      position: absolute;
-      bottom: 0;
+    nav .dropdown {
+      position: static;
+    }
+
+    nav .dropdown-item {
+      padding: 1em;
+    }
+
+    .nav-item > a:hover::before,
+    .nav-item.kpop > a:hover::before,
+    .nav-item.groups > a:hover::before,
+    .nav-item.recycle > a:hover::before,
+    .nav-item.artist > a:hover::before,
+    .nav-item.other > a:hover::before {
+      content: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav .nav-menu {
+      position: fixed;
       left: 0;
-      margin-bottom: 10px;
+      right: 0;
+      top: 0;
+      bottom: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffbad3;
+      transition: bottom 0.5s ease-in-out;
+      overflow: hidden;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    nav.opened .nav-menu {
+      bottom: 0;
+    }
+
+    nav .nav-item > a {
+      display: block;
+      text-align: right;
+      margin-top: 96px;
+      font-size: 2rem;
+    }
+
+    nav .nav-item > a:hover {
+      color: #c5117d;
+    }
+
+    nav .dropdown-menu {
+      left: auto;
+      right: 0;
+      padding: 1em; /* Adjust padding for better touch interaction */
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+      display: none;
+    }
+
+    nav .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    nav .btn-hamburger {
+      display: block;
+    }
+
+    .logo {
+      width: 70%;
+      display: flex;
     }
 
     nav .dropdown {
-      position: absolute;
+      position: static;
+    }
+
+    nav .dropdown-item {
+      padding: 1em;
+    }
+
+    .nav-item > a:hover::before,
+    .nav-item.kpop > a:hover::before,
+    .nav-item.groups > a:hover::before,
+    .nav-item.recycle > a:hover::before,
+    .nav-item.artist > a:hover::before,
+    .nav-item.other > a:hover::before {
+      content: none;
     }
   }
 </style>
