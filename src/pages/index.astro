@@ -1,6 +1,8 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Events from "../components/Events.astro";
+import Photocard from "../components/Photocard.astro";
+import ForsideBox from "../components/ForsideBox.astro";
 import Playbox from "../components/Playbox.astro";
 import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
@@ -25,6 +27,10 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <Welcome />
 
     <Events />
+
+    <Photocard />
+
+    <ForsideBox />
 
     {
       data.map((show) => {
