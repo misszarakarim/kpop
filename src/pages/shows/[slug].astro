@@ -34,7 +34,7 @@ console.log(myData);
       <div class="imggrid">
         <div class="imggradient">
           <div class="gridcircle1">
-            <h1>{myData.categories}</h1>
+            <h1>{myData.type}</h1>
             <div class="gridcircle">
               <div class="circle1"></div>
               <div class="circle2"></div>
@@ -105,54 +105,104 @@ console.log(myData);
       <h4 class="related">RELATED PRODUCTS</h4>
       <div class="boksflex">
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div>
+            <img src="../../../public/img/cloudearrings.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">50 kr</h4>
+          <p class="bokstext">CLOUD EARRINGS</p>
         </div>
         <div>
-          <div class="boks"></div>
+          <div class="boks5">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/keychain.jpeg" class="stickersbox" />
+          </div>
           <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <p class="bokstext">KEYCHAIN</p>
         </div>
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks6">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/photocardholder.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">100 kr</h4>
+          <p class="bokstext">PHOTOCARDHOLDER</p>
         </div>
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks7">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">40 kr</h4>
+          <p class="bokstext">STICKERS</p>
         </div>
       </div>
 
-      <h4 class="recently">RECENTLY VIEW PRODUCTS</h4>
+      <h4 class="recently">RECENTLY VIEWED PRODUCTS</h4>
       <div class="boksflex">
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div>
+            <img src="../../../public/img/blob.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">40 kr</h4>
+          <p class="bokstext">KEYCHAIN</p>
         </div>
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks5">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/hairclip.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">50 kr</h4>
+          <p class="bokstext">HAIRCLIP</p>
         </div>
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks6">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/sparkle.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">30 kr</h4>
+          <p class="bokstext">RAINBOW STICKERS</p>
         </div>
         <div>
-          <div class="boks"></div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+          <div class="boks7">
+            <div class="gridcircle3">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+            </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
+          </div>
+          <h4 class="boksprice">30 kr</h4>
+          <p class="bokstext">STICKERS</p>
         </div>
       </div>
     </div>
-  </body>
 
-  <Footer />
+    <Footer />
+  </body>
 </html>
 <style>
   .grid {
@@ -164,6 +214,7 @@ console.log(myData);
   }
   h1 {
     margin: 15px;
+    font-size: 250%;
   }
   .circle1 {
     height: 25px;
@@ -318,22 +369,60 @@ console.log(myData);
     font-size: 350%;
     margin-top: 50px;
     margin-bottom: 80px;
-    margin-left: 30px;
+    margin-left: 10px;
   }
 
   .boks {
-    width: 300px;
-    height: 300px;
-    background-color: #ff6f9c;
+    width: 310px;
+    height: 350px;
+    background-color: #c2dcfa;
     border-radius: 50px;
     margin: 20px;
     border: solid 5px rgb(197, 17, 125);
+  }
+  .boks5 {
+    width: 310px;
+    height: 350px;
+    background-color: #fac2c9;
+    border-radius: 50px;
+    margin: 20px;
+    border: solid 5px rgb(197, 17, 125);
+  }
+  .boks6 {
+    width: 310px;
+    height: 350px;
+    background-color: #d4fac2;
+    border-radius: 50px;
+    margin: 20px;
+    border: solid 5px rgb(197, 17, 125);
+  }
+  .boks7 {
+    width: 310px;
+    height: 350px;
+    background-color: #f9fac2;
+    border-radius: 50px;
+    margin: 20px;
+    border: solid 5px rgb(197, 17, 125);
+  }
+  .gridcircle3 {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+    margin-left: 190px;
+  }
+  .stickersbox {
+    height: 280px;
+    width: auto;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: solid 4px rgb(197, 17, 125);
   }
   .boksflex {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .boksprice {
     text-align: center;
@@ -420,6 +509,8 @@ console.log(myData);
     }
     h1 {
       margin: 15px;
+      font-size: 250%;
+      margin-left: 30px;
     }
     .circle1 {
       height: 25px;
@@ -446,7 +537,7 @@ console.log(myData);
       display: flex;
       gap: 5px;
       margin-top: 20px;
-      margin-left: 80px;
+      margin-left: 165px;
     }
     .gridcircle1 {
       display: grid;
@@ -492,6 +583,7 @@ console.log(myData);
     .informa {
       margin: 80px;
       margin-top: 20px;
+      margin-bottom: 0;
     }
     .overskrift2 {
       color: black;
@@ -561,28 +653,66 @@ console.log(myData);
     }
     .related {
       font-size: 450%;
-      margin-top: 150px;
+      margin-top: 80px;
       margin-bottom: 50px;
-      margin-left: 80px;
+      margin-left: 50px;
     }
     .boks {
-      width: 300px;
-      height: 300px;
-      background-color: #ff6f9c;
+      width: 310px;
+      height: 350px;
+      background-color: #c2dcfa;
       border-radius: 50px;
       margin: 20px;
       border: solid 5px rgb(197, 17, 125);
     }
+    .boks5 {
+      width: 310px;
+      height: 350px;
+      background-color: #fac2c9;
+      border-radius: 50px;
+      margin: 20px;
+      border: solid 5px rgb(197, 17, 125);
+    }
+    .boks6 {
+      width: 310px;
+      height: 350px;
+      background-color: #d4fac2;
+      border-radius: 50px;
+      margin: 20px;
+      border: solid 5px rgb(197, 17, 125);
+    }
+    .boks7 {
+      width: 310px;
+      height: 350px;
+      background-color: #f9fac2;
+      border-radius: 50px;
+      margin: 20px;
+      border: solid 5px rgb(197, 17, 125);
+    }
+    .stickersbox {
+      height: 270px;
+      width: auto;
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-left: 15px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+    .gridcircle3 {
+      display: flex;
+      gap: 5px;
+      margin-top: 20px;
+      margin-left: 180px;
+    }
     .boksflex {
       display: flex;
-      margin-left: 40px;
+      margin-left: 20px;
     }
     .recently {
       font-size: 450%;
       text-align: right;
-      margin-top: 150px;
+      margin-top: 80px;
       margin-bottom: 50px;
-      margin-right: 80px;
+      margin-right: 50px;
     }
 
     :root {
@@ -811,18 +941,32 @@ console.log(myData);
     }
 
     .boks {
-      width: 300px;
-      height: 300px;
-      background-color: #ff6f9c;
+      width: 310px;
+      height: 350px;
+      background-color: #c2dcfa;
       border-radius: 50px;
       margin: 20px;
       border: solid 5px rgb(197, 17, 125);
+    }
+    .stickersbox {
+      height: 270px;
+      width: auto;
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-left: 15px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+    .gridcircle3 {
+      display: flex;
+      gap: 5px;
+      margin-top: 20px;
+      margin-left: 180px;
     }
     .boksflex {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      margin-left: 50px;
+      margin-left: 30px;
     }
     .boksprice {
       text-align: center;
