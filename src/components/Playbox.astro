@@ -1,0 +1,14 @@
+<button id="play">Play</button>
+
+<script>
+  let audioelement = new Audio("../../public/song/clap.wav");
+  let masterplay = document.getElementById("play");
+
+  masterplay.addEventListener("click", () => {
+    if (audioelement.paused) {
+      audioelement.play();
+    } else {
+      audioelement.pause();
+    }
+  });
+</script>

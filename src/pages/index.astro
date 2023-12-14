@@ -5,6 +5,7 @@ import Welcome from "../components/Welcome.astro";
 import Events from "../components/Events.astro";
 import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
+import Playbox from "../components/Playbox.astro";
 const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
   method: "GET",
   headers: {
@@ -25,6 +26,8 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <Welcome />
 
     <Events />
+
+    <Playbox />
 
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
       <path
