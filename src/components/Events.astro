@@ -1,0 +1,200 @@
+---
+import Readmore from "./Readmore.astro";
+---
+
+<div class="box">
+  <h1>Events</h1>
+  <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+  <div class="box2">
+    <div class="scrollbox">
+      <h3>Next events</h3>
+      <div class="next-event">
+        <div class="circle circle2"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <h3>Past events</h3>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+    </div>
+    <Readmore />
+  </div>
+</div>
+
+<style>
+  .box {
+    border: 3px solid #c5117d;
+    border-radius: 25px;
+    background: #c2dcfa;
+    width: 200px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .box2 {
+    background: white;
+    border: 3px solid #c5117d;
+    border-radius: 25px;
+    height: 400px;
+    margin: 0 10px;
+    grid-column: 1 / 3;
+    padding: 0 10px;
+  }
+
+  .scrollbox {
+    overflow: scroll;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+  }
+
+  .next-event,
+  .past-event {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+  h1 {
+    margin: 15px 0 -15px 15px;
+  }
+
+  p {
+    color: #400027;
+    font-family: "zcool";
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .grid-circle {
+    display: flex;
+    column-gap: 3px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    margin: 10px 15px;
+    grid-column: 2;
+  }
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+  }
+
+  .circle1 {
+    background-color: #b1fef5; /* Color for the first circle */
+  }
+
+  .circle2 {
+    background-color: #c8ffa7; /* Color for the second circle */
+  }
+
+  .circle3 {
+    background-color: #ff6f9c; /* Color for the third circle */
+  }
+
+  /* TABLET */ /* Ingen ændringer i ipad version, den passer fra mobil af */
+
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+    .box {
+      width: 400px;
+      height: 700px;
+    }
+
+    .box2 {
+      height: 600px;
+      width: 350px;
+      margin: 0 20px;
+    }
+
+    .scrollbox {
+      height: 500px;
+      overflow-x: hidden;
+      margin: 0 10px 0 10px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .next-event,
+    .past-event {
+      margin: 20px 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 15px 0 -15px 25px;
+    }
+  }
+</style>

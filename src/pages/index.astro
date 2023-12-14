@@ -1,8 +1,10 @@
 ---
-import ForsideBox from "../components/ForsideBox.astro";
-import Photocard from "../components/Photocard.astro";
+import Welcome from "../components/Welcome.astro";
+import Events from "../components/Events.astro";
+import Playbox from "../components/Playbox.astro";
 import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
+import Footer from "../components/Footer.astro";
 const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
   method: "GET",
   headers: {
@@ -20,30 +22,120 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <title>Astro</title>
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
-      <path
-        fill="red"
-        stroke="purple"
-        stroke-width="2"
-        d="M 31.820312 12 C 13.438312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.438313 52 31.820312 52 L 32.179688 52 C 50.561688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 43.994141 18 C 45.099141 17.997 45.997 18.889141 46 19.994141 C 46.003 21.099141 45.110859 21.997 44.005859 22 C 42.900859 22.003 42.003 21.110859 42 20.005859 C 41.997 18.900859 42.889141 18.003 43.994141 18 z M 31.976562 22 C 37.498562 21.987 41.987 26.454563 42 31.976562 C 42.013 37.498562 37.545437 41.987 32.023438 42 C 26.501437 42.013 22.013 37.545437 22 32.023438 C 21.987 26.501437 26.454563 22.013 31.976562 22 z M 31.986328 26 C 28.672328 26.008 25.992 28.701625 26 32.015625 C 26.008 35.328625 28.700672 38.008 32.013672 38 C 35.327672 37.992 38.008 35.299328 38 31.986328 C 37.992 28.672328 35.299328 25.992 31.986328 26 z"
-      ></path>
-    </svg>
+    <Welcome />
 
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
-      <path fill="red" stroke="purple" stroke-width="2" d="M40.227,12C51.146,12,52,12.854,52,23.773v16.453C52,51.145,51.146,52,40.227,52h-2.089V37.438h5.134l0.807-5.77h-5.941	c0,0-0.009-3.378,0-4.221c0.017-1.649,1.394-2.483,2.577-2.471c1.183,0.012,3.634,0.004,3.634,0.004v-5.317	c0,0-2.123-0.275-4.349-0.298c-1.871-0.019-3.937,0.487-5.604,2.167c-1.696,1.709-1.963,4.254-1.996,7.364	c-0.009,0.9,0,2.772,0,2.772h-5.024v5.77H32.4V52h-8.626C12.854,52,12,51.145,12,40.227V23.773C12,12.854,12.854,12,23.773,12	H40.227z"></path>
-    </svg>
+    <Events />
 
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
-      <path fill="red" stroke="purple" stroke-width="2" d="M40.227,12C51.146,12,52,12.854,52,23.773v16.453C52,51.145,51.146,52,40.227,52H23.773C12.855,52,12,51.145,12,40.227	V23.773C12,12.854,12.855,12,23.773,12H40.227z M42.732,29.737v-4.196c0,0-2.218,0.011-4.091-1.705	c-1.574-1.442-1.705-4.143-1.705-4.143h-4.196c0,0,0,14.318,0,16.6c0,2.281-1.985,3.462-3.409,3.462	c-1.073,0-3.514-0.841-3.514-3.488c0-2.778,2.806-3.488,3.54-3.488c0.734,0,1.023,0.157,1.023,0.157v-4.429	c0,0-0.682-0.065-1.18-0.082c-4.235-0.143-7.736,3.657-7.736,7.841c0,3.535,2.765,7.815,7.815,7.815	c5.379,0,7.841-4.486,7.841-7.789c0-2.413,0-8.234,0-8.234s1.547,0.865,2.806,1.259C41.185,29.711,42.732,29.737,42.732,29.737z"></path>
-    </svg>
-
-    <h1>Astro</h1>
     {
       data.map((show) => {
         return <Pas data={show} />;
       })
     }
-    <ForsideBox />
-    <Photocard />
+    <h1>Astro</h1>
+    <footer>
+      <div class="foot">
+        <svg version="1.1" id="Lag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1980" style="enable-background:new 0 0 1920 1980;" xml:space="preserve">
+          <style type="text/css">
+            .st0 {
+              fill: #f6c5d8;
+              stroke: #c5117d;
+              stroke-width: 3;
+              stroke-miterlimit: 10;
+            }
+          </style>
+          <path class="st0" d="M0,1419.3c98.8-75.1,248-157.7,413-137c136.8,17.2,250.4,76.8,383,122c232.7,79.3,394,10,493-29
+	c141.9-55.9,170.5-113.9,305-150c123.4-33.1,256.6,5,326,40V1980H0V1419.3z"></path>
+        </svg>
+
+        <div class="footergrid">
+          <div class="footerboks">
+            <h4>VISIT OUR PHYSICAL STORE</h4>
+            <p>TheKorner - Studiestræde 12<br />1455 København K</p>
+          </div>
+          <div class="footerboks">
+            <h4>OPENING HOURS</h4>
+            <p>Monday - Friday: 13.00 - 17.00 <br />Saturday: 12.00 - 18.00<br />Sunday: CLOSED</p>
+          </div>
+          <div class="footerboks">
+            <h4>FOLLOW US ONLINE</h4>
+            <p class="pabout">Follow our socials to keep updated on the latest products, events, packing videos & much more!</p>
+          </div>
+          <div class="footerboks">
+            <h4>OTHER</h4>
+            <p class="pabout">About <br />Privacy Policy <br />Terms & Conditions <br />Shipping method<br />Recycle your kpop</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+
+      <style>
+        .foot {
+          margin-top: 400px;
+          position: relative;
+        }
+        .foot svg {
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          width: 100%;
+          height: auto;
+        }
+        h4 {
+          margin-bottom: 25px;
+          font-weight: 800;
+          font-size: larger;
+        }
+
+        .footergrid {
+          z-index: 10;
+
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          margin-left: 150px;
+        }
+        .footerboks {
+          margin-right: 80px;
+          margin-top: 0px;
+          margin-bottom: 70px;
+        }
+        p {
+          line-height: 45px;
+        }
+        @media only screen and (min-width: 1024px) {
+          .foot {
+            margin-top: 400px;
+            position: relative;
+          }
+          .footer svg {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            width: 100%;
+            height: auto;
+          }
+          h4 {
+            margin-bottom: 25px;
+            font-weight: 800;
+            font-size: larger;
+          }
+
+          .footergrid {
+            z-index: 10;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-left: 150px;
+          }
+          .footerboks {
+            margin-right: 80px;
+            margin-top: 0px;
+            margin-bottom: 70px;
+          }
+          p {
+            line-height: 45px;
+          }
+        }
+      </style>
+    </footer>
   </body>
 </html>

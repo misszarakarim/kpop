@@ -1,0 +1,184 @@
+<div class="container">
+  <h1>Welcome (づ ◕‿◕ )づ</h1>
+  <div class="grid-circle">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+  <div class="gallery">
+    <div class="imgbox" style="    background-color: #9fd7f5;
+    ">
+      <h3 style="color: #005FD7;">Groups</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
+    </div>
+    <div class="imgbox" style="    background-color: #bbf5de;">
+      <h3 style="color: #00D77B;">Recycle</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
+    </div>
+    <div class="imgbox" style="    background-color: #ffedac;    ">
+      <h3 style="color: #ffc52a;">Artist</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
+    </div>
+    <div class="imgbox" style="    background-color: hsl(282, 71%, 86%);
+    ">
+      <h3 style="color: #9B13D7;">Other</h3>
+      <img src="../../public/img/placeholderwelcome.png" alt="" />
+    </div>
+  </div>
+</div>
+
+<style>
+  /*MOBIL*/
+  .container {
+    width: 95%;
+    height: 216px;
+    background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+    border-radius: 25px;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    margin: 2%;
+  }
+
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 /3;
+    margin: 0 50px 5px 50px;
+  }
+
+  .imgbox {
+    width: 100%;
+    height: 170px;
+    border-style: solid;
+    border-color: #c5117d;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.3s ease;
+  }
+
+  img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 112%;
+    transform: translateX(-5%);
+  }
+
+  h1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 20px;
+    white-space: nowrap;
+    align-self: start;
+    margin: 2px 20px;
+  }
+
+  h3 {
+    transform: rotate(-20deg);
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  .grid-circle {
+    display: flex;
+    column-gap: 3px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    margin: 10px 15px;
+  }
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+  }
+
+  .circle1 {
+    background-color: #b1fef5; /* Color for the first circle */
+  }
+
+  .circle2 {
+    background-color: #c8ffa7; /* Color for the second circle */
+  }
+
+  .circle3 {
+    background-color: #ff6f9c; /* Color for the third circle */
+  }
+
+  /* TABLET */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      height: 450px;
+    }
+
+    .imgbox {
+      height: 340px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-top: 30px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+    .container {
+      height: 620px;
+    }
+
+    .imgbox {
+      height: 480px;
+    }
+
+    h3 {
+      font-size: 50px;
+      margin-top: 30px;
+    }
+
+    img {
+      width: 75%;
+      transform: translateX(15%);
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 20px 60px auto;
+    }
+
+    .imgbox:hover img {
+      width: 50%;
+      transform: translateX(45%);
+    }
+
+    .imgbox:hover {
+      width: 200%;
+    }
+  }
+</style>
