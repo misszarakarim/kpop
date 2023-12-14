@@ -52,7 +52,6 @@ import Readmore from "./Readmore.astro";
 
 <style>
   .box {
-    border-style: solid;
     border: 3px solid #c5117d;
     border-radius: 25px;
     background: #c2dcfa;
@@ -64,7 +63,6 @@ import Readmore from "./Readmore.astro";
 
   .box2 {
     background: white;
-    border-style: solid;
     border: 3px solid #c5117d;
     border-radius: 25px;
     height: 400px;
@@ -81,7 +79,6 @@ import Readmore from "./Readmore.astro";
 
   h3 {
     text-align: center;
-    grid-column: 1;
     text-decoration: underline;
     margin: 10px;
   }
@@ -133,5 +130,46 @@ import Readmore from "./Readmore.astro";
 
   .circle3 {
     background-color: #ff6f9c; /* Color for the third circle */
+  }
+
+  /* TABLET */ /* Ingen ændringer i ipad version, den passer fra mobil af */
+
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+    .box {
+      width: 400px;
+      height: 700px;
+    }
+
+    .box2 {
+      height: 600px;
+      width: 350px;
+      margin: 0 20px;
+    }
+
+    .scrollbox {
+      height: 500px;
+      overflow-x: hidden;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .next-event,
+    .past-event {
+      margin: 15px 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 15px 0 -15px 25px;
+    }
   }
 </style>
