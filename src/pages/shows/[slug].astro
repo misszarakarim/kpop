@@ -1,5 +1,6 @@
 ---
 import "../../global_css/style.css";
+import Footer from "../../components/Footer.astro";
 export async function getStaticPaths() {
   const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
     method: "GET",
@@ -100,32 +101,66 @@ console.log(myData);
         </div>
       </div>
     </div>
-    <div>
+    <div class="relatedx">
       <h4 class="related">RELATED PRODUCTS</h4>
       <div class="boksflex">
-        <div class="boks"></div>
-        <div class="boks"></div>
-        <div class="boks"></div>
-        <div class="boks"></div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
       </div>
 
       <h4 class="recently">RECENTLY VIEW PRODUCTS</h4>
       <div class="boksflex">
-        <div class="boks"></div>
-        <div class="boks"></div>
-        <div class="boks"></div>
-        <div class="boks"></div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
+        <div>
+          <div class="boks"></div>
+          <h4 class="boksprice">80 kr</h4>
+          <p class="bokstext">(KITZAT) TOTORO ACRYLIC</p>
+        </div>
       </div>
     </div>
   </body>
+
+  <Footer />
 </html>
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .imggrid {
-    margin-left: 100px;
+    margin-left: 10px;
   }
   h1 {
     margin: 15px;
@@ -155,7 +190,7 @@ console.log(myData);
     display: flex;
     gap: 5px;
     margin-top: 20px;
-    margin-left: 80px;
+    margin-left: 180px;
   }
   .gridcircle1 {
     display: grid;
@@ -166,11 +201,11 @@ console.log(myData);
     padding: 10px;
     margin: 10px;
     border-radius: 50px;
-    border: solid 4px rgb(197, 17, 125);
+    border: solid 3px rgb(197, 17, 125);
   }
 
   .img1 {
-    height: 500px;
+    height: 600px;
     width: auto;
     margin: 30px;
     margin-top: 15px;
@@ -183,11 +218,11 @@ console.log(myData);
     border-radius: 50px;
     background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
     border: solid 4px rgb(197, 17, 125);
-    padding: 5px;
-    margin-left: 20px;
+    padding: 10px;
+    margin-left: 10px;
   }
   .img2 {
-    height: 180px;
+    height: 250px;
     width: auto;
 
     margin: 10px;
@@ -199,38 +234,43 @@ console.log(myData);
     margin-left: 30px;
   }
   .informa {
-    margin: 80px;
+    margin: 50px;
     margin-top: 20px;
   }
   .overskrift2 {
     color: black;
     font-weight: 300;
-    font-size: 280%;
+    font-size: 320%;
     margin-bottom: 10px;
   }
   .hvem {
     color: rgb(197, 17, 125);
     margin-bottom: 50px;
+    font-size: 150%;
   }
   hr {
     border: 2px dashed #c5117d65;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     margin-top: 20px;
   }
   .price {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: rgb(197, 17, 125);
-    font-size: 300%;
+    font-size: 400%;
   }
 
   .green {
     margin-bottom: 30px;
+
+    font-size: 150%;
   }
   .red {
     margin-bottom: 30px;
+    font-size: 150%;
   }
   .blue {
     margin-bottom: 30px;
+    font-size: 150%;
   }
   .categories {
     margin-bottom: 40px;
@@ -239,24 +279,24 @@ console.log(myData);
   }
 
   .circlegreen {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     background-color: #c8ffa7;
     border-radius: 100px;
     border: solid rgb(197, 17, 125);
     margin-right: 30px;
   }
   .circlered {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     background-color: #ff6f9c;
     border-radius: 100px;
     border: solid rgb(197, 17, 125);
     margin-right: 30px;
   }
   .circleblue {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     background-color: #b1fef5;
     border-radius: 100px;
     border: solid rgb(197, 17, 125);
@@ -267,13 +307,20 @@ console.log(myData);
   }
   .catflex {
     display: flex;
+    font-size: 130%;
+    margin-bottom: 20px;
+  }
+  .relatedx {
+    display: grid;
+    grid-template-columns: 1fr;
   }
   .related {
-    font-size: 450%;
-    margin-top: 150px;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    font-size: 350%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    margin-left: 30px;
   }
+
   .boks {
     width: 300px;
     height: 300px;
@@ -283,15 +330,27 @@ console.log(myData);
     border: solid 5px rgb(197, 17, 125);
   }
   .boksflex {
-    display: flex;
-    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 20px;
+  }
+  .boksprice {
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: 20px;
+  }
+
+  .bokstext {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 100px;
   }
   .recently {
-    font-size: 450%;
+    font-size: 350%;
     text-align: right;
-    margin-top: 150px;
-    margin-bottom: 50px;
-    margin-right: 80px;
+    margin-top: 100px;
+    margin-bottom: 80px;
   }
 
   :root {
@@ -349,6 +408,499 @@ console.log(myData);
     text-align: center;
     margin-top: 16px;
     font-size: 180%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .imggrid {
+      margin-left: 100px;
+    }
+    h1 {
+      margin: 15px;
+    }
+    .circle1 {
+      height: 25px;
+      width: 25px;
+      background-color: #b1fef5;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .circle2 {
+      height: 25px;
+      width: 25px;
+      background-color: #c8ffa7;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .circle3 {
+      height: 25px;
+      width: 25px;
+      background-color: #ff6f9c;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .gridcircle {
+      display: flex;
+      gap: 5px;
+      margin-top: 20px;
+      margin-left: 80px;
+    }
+    .gridcircle1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .imggradient {
+      background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
+      padding: 10px;
+      margin: 10px;
+      border-radius: 50px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+
+    .img1 {
+      height: 500px;
+      width: auto;
+      margin: 30px;
+      margin-top: 15px;
+      border-radius: 50px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+
+    .img2gradient {
+      margin: 15px;
+      border-radius: 50px;
+      background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
+      border: solid 4px rgb(197, 17, 125);
+      padding: 5px;
+      margin-left: 20px;
+    }
+    .img2 {
+      height: 180px;
+      width: auto;
+
+      margin: 10px;
+      border-radius: 50px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+    .img2flex {
+      display: flex;
+      margin-left: 30px;
+    }
+    .informa {
+      margin: 80px;
+      margin-top: 20px;
+    }
+    .overskrift2 {
+      color: black;
+      font-weight: 300;
+      font-size: 280%;
+      margin-bottom: 10px;
+    }
+    .hvem {
+      color: rgb(197, 17, 125);
+      margin-bottom: 50px;
+    }
+    hr {
+      border: 2px dashed #c5117d65;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+    .price {
+      margin-bottom: 50px;
+      color: rgb(197, 17, 125);
+      font-size: 300%;
+    }
+
+    .green {
+      margin-bottom: 30px;
+    }
+    .red {
+      margin-bottom: 30px;
+    }
+    .blue {
+      margin-bottom: 30px;
+    }
+    .categories {
+      margin-bottom: 40px;
+      color: rgb(197, 17, 125);
+      margin-right: 10px;
+    }
+
+    .circlegreen {
+      height: 25px;
+      width: 25px;
+      background-color: #c8ffa7;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .circlered {
+      height: 25px;
+      width: 25px;
+      background-color: #ff6f9c;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .circleblue {
+      height: 25px;
+      width: 25px;
+      background-color: #b1fef5;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .greengrid {
+      display: flex;
+    }
+    .catflex {
+      display: flex;
+    }
+    .related {
+      font-size: 450%;
+      margin-top: 150px;
+      margin-bottom: 50px;
+      margin-left: 80px;
+    }
+    .boks {
+      width: 300px;
+      height: 300px;
+      background-color: #ff6f9c;
+      border-radius: 50px;
+      margin: 20px;
+      border: solid 5px rgb(197, 17, 125);
+    }
+    .boksflex {
+      display: flex;
+      margin-left: 40px;
+    }
+    .recently {
+      font-size: 450%;
+      text-align: right;
+      margin-top: 150px;
+      margin-bottom: 50px;
+      margin-right: 80px;
+    }
+
+    :root {
+      --width-container: 10px;
+    }
+    .container {
+      display: flex;
+      background-color: white;
+      border: solid 5px #63469e;
+      border-radius: 50px;
+      width: 150px;
+      height: 75px;
+      margin-right: 30px;
+    }
+
+    button {
+      width: 30px;
+      height: auto;
+
+      background-color: transparent;
+      outline-style: none;
+      border-style: none;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    .minus {
+      margin-left: 20px;
+    }
+    .plus {
+      margin-right: 20px;
+    }
+    .number.dim {
+      margin: 20px;
+      color: #63469e;
+    }
+    .number {
+      margin: 20px;
+      color: #63469e;
+    }
+    .add {
+      height: 75px;
+      width: 350px;
+      background-color: #ad94e0;
+      border: solid 5px #63469e;
+
+      border-radius: 50px;
+    }
+    .plusminus {
+      display: flex;
+      margin-bottom: 40px;
+    }
+    .addh4 {
+      color: white;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 180%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .imggrid {
+      margin-left: 10px;
+    }
+    h1 {
+      margin: 15px;
+    }
+    .circle1 {
+      height: 25px;
+      width: 25px;
+      background-color: #b1fef5;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .circle2 {
+      height: 25px;
+      width: 25px;
+      background-color: #c8ffa7;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .circle3 {
+      height: 25px;
+      width: 25px;
+      background-color: #ff6f9c;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+    }
+    .gridcircle {
+      display: flex;
+      gap: 5px;
+      margin-top: 25px;
+      margin-left: 250px;
+    }
+    .gridcircle1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .imggradient {
+      background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
+      padding: 10px;
+      margin: 10px;
+      border-radius: 50px;
+      border: solid 3px rgb(197, 17, 125);
+    }
+
+    .img1 {
+      height: 700px;
+      width: auto;
+      margin: 30px;
+      margin-top: 15px;
+      border-radius: 50px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+
+    .img2gradient {
+      margin: 15px;
+      border-radius: 50px;
+      background: linear-gradient(295deg, rgba(249, 250, 194, 1) 10%, rgba(212, 250, 194, 1) 17%, rgba(212, 194, 250, 1) 35%, rgba(250, 194, 201, 1) 46%, rgba(250, 194, 201, 1) 52%, rgba(227, 205, 221, 1) 66%, rgba(195, 222, 247, 1) 79%, rgba(212, 250, 194, 1) 90%);
+      border: solid 4px rgb(197, 17, 125);
+      padding: 10px;
+      margin-left: 10px;
+    }
+    .img2 {
+      height: 250px;
+      width: auto;
+
+      margin: 10px;
+      border-radius: 50px;
+      border: solid 4px rgb(197, 17, 125);
+    }
+    .img2flex {
+      display: flex;
+      margin-left: 30px;
+    }
+    .informa {
+      margin: 50px;
+      margin-top: 20px;
+    }
+    .overskrift2 {
+      color: black;
+      font-weight: 300;
+      font-size: 320%;
+      margin-bottom: 10px;
+    }
+    .hvem {
+      color: rgb(197, 17, 125);
+      margin-bottom: 50px;
+      font-size: 150%;
+    }
+    hr {
+      border: 2px dashed #c5117d65;
+      margin-bottom: 60px;
+      margin-top: 20px;
+    }
+    .price {
+      margin-bottom: 20px;
+      color: rgb(197, 17, 125);
+      font-size: 400%;
+    }
+
+    .green {
+      margin-bottom: 30px;
+
+      font-size: 150%;
+    }
+    .red {
+      margin-bottom: 30px;
+      font-size: 150%;
+    }
+    .blue {
+      margin-bottom: 30px;
+      font-size: 150%;
+    }
+    .categories {
+      margin-bottom: 40px;
+      color: rgb(197, 17, 125);
+      margin-right: 10px;
+    }
+
+    .circlegreen {
+      height: 35px;
+      width: 35px;
+      background-color: #c8ffa7;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .circlered {
+      height: 35px;
+      width: 35px;
+      background-color: #ff6f9c;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .circleblue {
+      height: 35px;
+      width: 35px;
+      background-color: #b1fef5;
+      border-radius: 100px;
+      border: solid rgb(197, 17, 125);
+      margin-right: 30px;
+    }
+    .greengrid {
+      display: flex;
+    }
+    .catflex {
+      display: flex;
+      font-size: 130%;
+      margin-bottom: 20px;
+    }
+    .relatedx {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .related {
+      font-size: 350%;
+      margin-top: 50px;
+      margin-bottom: 80px;
+      margin-left: 30px;
+    }
+
+    .boks {
+      width: 300px;
+      height: 300px;
+      background-color: #ff6f9c;
+      border-radius: 50px;
+      margin: 20px;
+      border: solid 5px rgb(197, 17, 125);
+    }
+    .boksflex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      margin-left: 50px;
+    }
+    .boksprice {
+      text-align: center;
+      font-size: 200%;
+      margin-bottom: 20px;
+      margin-right: 50px;
+    }
+
+    .bokstext {
+      text-align: center;
+      font-size: 130%;
+      margin-bottom: 100px;
+      margin-right: 50px;
+    }
+    .recently {
+      font-size: 350%;
+      text-align: right;
+      margin-top: 100px;
+      margin-bottom: 80px;
+      margin-right: 50px;
+    }
+
+    :root {
+      --width-container: 10px;
+    }
+    .container {
+      display: flex;
+      background-color: white;
+      border: solid 5px #63469e;
+      border-radius: 50px;
+      width: 150px;
+      height: 75px;
+      margin-right: 30px;
+    }
+
+    button {
+      width: 30px;
+      height: auto;
+
+      background-color: transparent;
+      outline-style: none;
+      border-style: none;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    .minus {
+      margin-left: 20px;
+    }
+    .plus {
+      margin-right: 20px;
+    }
+    .number.dim {
+      margin: 20px;
+      color: #63469e;
+    }
+    .number {
+      margin: 20px;
+      color: #63469e;
+    }
+    .add {
+      height: 75px;
+      width: 350px;
+      background-color: #ad94e0;
+      border: solid 5px #63469e;
+
+      border-radius: 50px;
+    }
+    .plusminus {
+      display: flex;
+      margin-bottom: 40px;
+    }
+    .addh4 {
+      color: white;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 180%;
+    }
   }
 </style>
 
