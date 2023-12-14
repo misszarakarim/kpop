@@ -164,12 +164,17 @@ import Readmore from "./Readmore.astro";
     .box {
       width: 400px;
       height: 700px;
+      border-radius: 50px;
+      border: 4px solid #c5117d;
+      margin: 25px;
     }
 
     .box2 {
       height: 600px;
       width: 350px;
       margin: 0 20px;
+      border-radius: 50px;
+      border: 4px solid #c5117d;
     }
 
     .scrollbox {
@@ -195,6 +200,27 @@ import Readmore from "./Readmore.astro";
     h1 {
       font-size: 40px;
       margin: 15px 0 -15px 25px;
+    }
+
+    .grid-circle {
+      display: flex;
+      column-gap: 3px;
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+      align-self: start;
+      margin: 15px 29px;
+      grid-column: 2;
+    }
+
+    .circle {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #c5117d;
     }
   }
 </style>
