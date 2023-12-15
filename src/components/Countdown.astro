@@ -2,20 +2,23 @@
 
 ---
 
-<div class="grid-item">
-  <h3>Countdown for next event</h3>
-  <div class="grid-circle">
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
+<div>
+  <img src="../public/img/koen.png" class="ko" alt="ko" />
+  <div class="grid-item">
+    <h3>Countdown for next event</h3>
+    <div class="grid-circle">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+    </div>
+    <div class="countdown"></div>
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
   </div>
-  <div class="countdown"></div>
-  <ul>
-    <li><span id="days"></span>days</li>
-    <li><span id="hours"></span>Hours</li>
-    <li><span id="minutes"></span>Minutes</li>
-    <li><span id="seconds"></span>Seconds</li>
-  </ul>
 </div>
 
 <style>
@@ -26,33 +29,42 @@
     align-items: center;
     border: 4px solid #c5117d;
     background-color: #c2dcfa;
-    padding: 12px;
-    padding-top: 56px;
+    padding: 18px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-top: 155px;
     text-align: center;
-    border-radius: 21px;
-    margin: auto 32px;
+    border-radius: 50px;
+    margin: auto -100px;
+    margin-left: -100px;
+    margin-left: -100px;
+    padding-left: 3%;
+    margin-left: 22%;
+    width: 214%;
   }
 
   h3 {
-    font-size: 20px;
-    margin-right: 90px;
+    font-size: 250%;
+    margin-right: 318px;
     white-space: nowrap;
     position: absolute;
-    top: 16px;
+    top: 14px;
   }
 
   .countdown {
     position: relative;
     border: 4px solid #c5117d;
-    border-radius: 24px;
+    border-radius: 50px;
     background-color: #fff;
-    padding: 80px 140px;
+    padding: 118px 372px;
   }
 
   ul {
     list-style: none;
     display: flex;
-    gap: 14px;
+    gap: 57px;
     color: #c5117d;
     text-align: center;
     position: absolute;
@@ -67,7 +79,7 @@
     font-family: "zcool", sans-serif;
     margin-left: 10px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 46px;
   }
 
   li span {
@@ -80,9 +92,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3px;
-    margin-left: 199px;
-    margin-top: -39px;
-    margin-bottom: 12px;
+    margin-left: 651px;
+    margin-top: -132px;
+    margin-bottom: 28px;
   }
 
   .circle {
@@ -105,6 +117,14 @@
 
   .circle3 {
     background-color: #ff6f9c; /* Color for the third circle */
+  }
+
+  .ko {
+    width: 188%;
+    position: absolute;
+    top: 303%;
+    z-index: 1;
+    left: 69%;
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -170,6 +190,14 @@
   }
 
   @media only screen and (min-width: 1024px) {
+    .ko {
+      width: 44%;
+      position: absolute;
+      top: 295%;
+      z-index: 1;
+      left: 37%;
+      top: 2398px;
+    }
     .countdown {
       border-radius: 50px;
     }
@@ -180,6 +208,7 @@
 
     .grid-item {
       margin: auto 269px;
+      margin-top: 11%;
     }
 
     h3 {
@@ -199,7 +228,7 @@
       gap: 44px;
       position: absolute;
       top: 40%;
-      left: 48%;
+      left: 52%;
     }
 
     li {

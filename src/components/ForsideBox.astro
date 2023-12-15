@@ -60,6 +60,7 @@
 </div>
 
 <style>
+  /* WEB */
   @media only screen and (min-width: 1024px) {
     .overall {
       display: flex;
@@ -117,7 +118,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3px;
-      margin-right: -145px;
+      margin-right: -132px;
       margin-top: -49px;
       margin-bottom: 6px;
     }
@@ -161,5 +162,111 @@
       top: 38%;
       left: 37%;
     }
+  }
+
+  /* TABLET */
+
+  /* MOBILE */
+  .overall {
+    display: flex;
+    gap: 32px;
+    padding: 7px;
+    padding-left: 7px;
+    margin-top: -9%;
+    padding-left: 2%;
+  }
+
+  .box {
+    position: relative;
+    width: 251px;
+    height: 197px;
+    border: 4px solid #c5117d;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+  }
+
+  .box:nth-child(1) {
+    background-color: #f9fac2;
+  }
+
+  .box:nth-child(2) {
+    background-color: #c2dcfa;
+  }
+
+  .box:nth-child(3) {
+    background-color: #fac2c9;
+  }
+
+  .inner-box {
+    width: 113%;
+    height: 86%;
+    margin-top: -82px;
+    background-color: #fff;
+    border-radius: 51px;
+    border: 4px solid #c5117d;
+    margin-left: -6%;
+  }
+
+  .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    margin-top: -6%;
+    margin-left: 4%;
+  }
+
+  .grid-circle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    margin-right: -132px;
+    margin-top: -49px;
+    margin-bottom: 6px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+  }
+
+  .circle1 {
+    background-color: #b1fef5;
+  }
+
+  .circle2 {
+    background-color: #c8ffa7;
+  }
+
+  .circle3 {
+    background-color: #ff6f9c;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+    border-radius: 21%;
+    margin-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 16%;
+  }
+
+  svg {
+    position: absolute;
+    top: 38%;
+    left: 37%;
   }
 </style>
