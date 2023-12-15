@@ -1,4 +1,12 @@
 ---
+import Pas from "../components/Pas.astro";
+const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro",
+  },
+}).then((res) => res.json());
+
 import "../global_css/style.css";
 import BigBoxListe from "../components/BigBoxListe.astro";
 import ListeBox from "../components/ListeBox.astro";
@@ -7,7 +15,6 @@ import Knap from "../components/Knap.astro";
 import ListeText from "../components/ListeText.astro";
 import Nav from "../components/Nav.astro";
 import Tal from "../components/Tal.astro";
-("../components/ListeBox.astro");
 ---
 
 <html lang="en">
@@ -24,8 +31,16 @@ import Tal from "../components/Tal.astro";
     <ListeText />
     <Search />
     <Knap />
-    <ListeBox />
-    <Tal />
+    <section class="shows">
+      {
+        data.map((show) => {
+          return <Pas data={show} />;
+        })
+      }
+
+      <!-- <ListeBox /> -->
+      <Tal />
+    </section>
   </body>
   <style></style>
 </html>

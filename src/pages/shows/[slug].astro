@@ -1,6 +1,7 @@
 ---
 import "../../global_css/style.css";
 import Footer from "../../components/Footer.astro";
+import Nav from "../../components/Nav.astro";
 export async function getStaticPaths() {
   const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
     method: "GET",
@@ -16,7 +17,6 @@ export async function getStaticPaths() {
     };
   });
 }
-
 const { myData } = Astro.props;
 console.log(myData);
 ---
