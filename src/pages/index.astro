@@ -6,6 +6,7 @@ import Events from "../components/Events.astro";
 import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
 import Footer from "../components/Footer.astro";
+import Sale from "../components/Sale.astro";
 const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
   method: "GET",
   headers: {
@@ -26,6 +27,7 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <Welcome />
 
     <Events />
+    <Sale />
 
     {
       data.map((show) => {
@@ -68,74 +70,73 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
         </div>
       </div>
     </footer>
-
-    <style>
-      .foot {
-        margin-top: 400px;
-        position: relative;
-      }
-      .foot svg {
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        width: 100%;
-        height: auto;
-      }
-      h4 {
-        margin-bottom: 25px;
-        font-weight: 800;
-        font-size: larger;
-      }
-
-      .footergrid {
-        z-index: 10;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin-left: 150px;
-      }
-      .footerboks {
-        margin-right: 80px;
-        margin-top: 0px;
-        margin-bottom: 70px;
-      }
-      p {
-        line-height: 45px;
-      }
-      @media only screen and (min-width: 1024px) {
-        .foot {
-          margin-top: 400px;
-          position: relative;
-        }
-        .footer svg {
-          position: absolute;
-          bottom: 0;
-          z-index: -1;
-          width: 100%;
-          height: auto;
-        }
-        h4 {
-          margin-bottom: 25px;
-          font-weight: 800;
-          font-size: larger;
-        }
-
-        .footergrid {
-          z-index: 10;
-
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          margin-left: 150px;
-        }
-        .footerboks {
-          margin-right: 80px;
-          margin-top: 0px;
-          margin-bottom: 70px;
-        }
-        p {
-          line-height: 45px;
-        }
-      }
-    </style>
   </body>
 </html>
+<style>
+  .foot {
+    margin-top: 400px;
+    position: relative;
+  }
+  .foot svg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+  }
+  h4 {
+    margin-bottom: 25px;
+    font-weight: 800;
+    font-size: larger;
+  }
+
+  .footergrid {
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 150px;
+  }
+  .footerboks {
+    margin-right: 80px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+  p {
+    line-height: 45px;
+  }
+  @media only screen and (min-width: 1024px) {
+    .foot {
+      margin-top: 400px;
+      position: relative;
+    }
+    .footer svg {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: auto;
+    }
+    h4 {
+      margin-bottom: 25px;
+      font-weight: 800;
+      font-size: larger;
+    }
+
+    .footergrid {
+      z-index: 10;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-left: 150px;
+    }
+    .footerboks {
+      margin-right: 80px;
+      margin-top: 0px;
+      margin-bottom: 70px;
+    }
+    p {
+      line-height: 45px;
+    }
+  }
+</style>
