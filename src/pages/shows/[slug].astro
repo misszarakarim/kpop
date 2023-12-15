@@ -29,182 +29,188 @@ console.log(myData);
     <meta name="generator" content={Astro.generator} />
     <title>{myData.slug}</title>
   </head>
+
   <body>
-    <div class="grid">
-      <div class="imggrid">
-        <div class="imggradient">
-          <div class="gridcircle1">
-            <h1>{myData.type}</h1>
-            <div class="gridcircle">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
+    <Nav />
+    <div class="body">
+      <div class="grid">
+        <div class="imggrid">
+          <div class="imggradient">
+            <div class="gridcircle1">
+              <h1>{myData.type}</h1>
+              <div class="gridcircle">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div>
+            </div>
+            <img class="img1" src={myData.img1} alt="#" />
+          </div>
+          <div class="img2flex">
+            <div class="img2gradient">
+              <img class="img2" src={myData.img1} alt="#" />
+            </div>
+            <div class="img2gradient">
+              <img class="img2" src={myData.img2} alt="#" />
             </div>
           </div>
-          <img class="img1" src={myData.img1} alt="#" />
         </div>
-        <div class="img2flex">
-          <div class="img2gradient">
-            <img class="img2" src={myData.img1} alt="#" />
+        <div class="informa">
+          <h4 class="overskrift2">{myData.name}</h4>
+          <p class="hvem">Af: {myData.name}</p>
+
+          <h4 class="price">{myData.price} KR</h4>
+
+          <hr />
+          <div class="plusminus">
+            <div class="container">
+              <button class="minus" aria-label="Decrease by one" disabled>
+                <img src="../public/img/minimize-sign.png" alt="minus" />
+              </button>
+              <div class="number dim">0</div>
+              <button class="plus" aria-label="Increase by one">
+                <img src="../public/img/add.png" alt="add" />
+              </button>
+            </div>
+            <div class="add">
+              <h4 class="addh4">ADD TO CART</h4>
+            </div>
           </div>
-          <div class="img2gradient">
-            <img class="img2" src={myData.img2} alt="#" />
+
+          <div class="greengrid">
+            <div class="circlegreen"></div>
+            <p class="green">Free shipping in Denmark on orders over 499 kr</p>
+          </div>
+          <div class="greengrid">
+            <div class="circlered"></div>
+            <p class="red">We ship to EU, UK OG US from Denmark</p>
+          </div>
+          <div class="greengrid">
+            <div class="circleblue"></div>
+            <p class="blue">Tags: {myData.tags}</p>
+          </div>
+          <hr />
+          <div class="catflex">
+            <p class="categories">CATEGORIES:</p>
+            <p>{myData.categories}</p>
+          </div>
+          <div class="catflex">
+            <p class="categories">DESCRIPTION:</p>
+            <p>{myData.bio}</p>
+          </div>
+          <div class="catflex">
+            <p class="categories">ADDITIONAL INFOMATION:</p>
+            <p>{myData.ai}</p>
           </div>
         </div>
       </div>
-      <div class="informa">
-        <h4 class="overskrift2">{myData.name}</h4>
-        <p class="hvem">Af: {myData.name}</p>
-
-        <h4 class="price">{myData.price} KR</h4>
-
-        <hr />
-        <div class="plusminus">
-          <div class="container">
-            <button class="minus" aria-label="Decrease by one" disabled>
-              <img src="../public/img/minimize-sign.png" alt="minus" />
-            </button>
-            <div class="number dim">0</div>
-            <button class="plus" aria-label="Increase by one">
-              <img src="../public/img/add.png" alt="add" />
-            </button>
+      <div class="relatedx">
+        <h4 class="related">RELATED PRODUCTS</h4>
+        <div class="boksflex">
+          <div>
+            <div class="boks">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div>
+              <img src="../../../public/img/cloudearrings.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">50 kr</h4>
+            <p class="bokstext">CLOUD EARRINGS</p>
           </div>
-          <div class="add">
-            <h4 class="addh4">ADD TO CART</h4>
+          <div>
+            <div class="boks5">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/keychain.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">80 kr</h4>
+            <p class="bokstext">KEYCHAIN</p>
+          </div>
+          <div>
+            <div class="boks6">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/photocardholder.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">100 kr</h4>
+            <p class="bokstext">PHOTOCARDHOLDER</p>
+          </div>
+          <div>
+            <div class="boks7">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">40 kr</h4>
+            <p class="bokstext">STICKERS</p>
           </div>
         </div>
 
-        <div class="greengrid">
-          <div class="circlegreen"></div>
-          <p class="green">Free shipping in Denmark on orders over 499 kr</p>
-        </div>
-        <div class="greengrid">
-          <div class="circlered"></div>
-          <p class="red">We ship to EU, UK OG US from Denmark</p>
-        </div>
-        <div class="greengrid">
-          <div class="circleblue"></div>
-          <p class="blue">Tags: {myData.tags}</p>
-        </div>
-        <hr />
-        <div class="catflex">
-          <p class="categories">CATEGORIES:</p>
-          <p>{myData.categories}</p>
-        </div>
-        <div class="catflex">
-          <p class="categories">DESCRIPTION:</p>
-          <p>{myData.bio}</p>
-        </div>
-        <div class="catflex">
-          <p class="categories">ADDITIONAL INFOMATION:</p>
-          <p>{myData.ai}</p>
+        <h4 class="recently">RECENTLY VIEWED PRODUCTS</h4>
+        <div class="boksflex">
+          <div>
+            <div class="boks">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div>
+              <img src="../../../public/img/blob.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">40 kr</h4>
+            <p class="bokstext">KEYCHAIN</p>
+          </div>
+          <div>
+            <div class="boks5">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/hairclip.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">50 kr</h4>
+            <p class="bokstext">HAIRCLIP</p>
+          </div>
+          <div>
+            <div class="boks6">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/sparkle.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">30 kr</h4>
+            <p class="bokstext">RAINBOW STICKERS</p>
+          </div>
+          <div>
+            <div class="boks7">
+              <div class="gridcircle3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
+            </div>
+            <h4 class="boksprice">30 kr</h4>
+            <p class="bokstext">STICKERS</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="relatedx">
-      <h4 class="related">RELATED PRODUCTS</h4>
-      <div class="boksflex">
-        <div>
-          <div class="boks">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div>
-            <img src="../../../public/img/cloudearrings.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">50 kr</h4>
-          <p class="bokstext">CLOUD EARRINGS</p>
-        </div>
-        <div>
-          <div class="boks5">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/keychain.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">80 kr</h4>
-          <p class="bokstext">KEYCHAIN</p>
-        </div>
-        <div>
-          <div class="boks6">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/photocardholder.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">100 kr</h4>
-          <p class="bokstext">PHOTOCARDHOLDER</p>
-        </div>
-        <div>
-          <div class="boks7">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">40 kr</h4>
-          <p class="bokstext">STICKERS</p>
-        </div>
-      </div>
-
-      <h4 class="recently">RECENTLY VIEWED PRODUCTS</h4>
-      <div class="boksflex">
-        <div>
-          <div class="boks">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div>
-            <img src="../../../public/img/blob.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">40 kr</h4>
-          <p class="bokstext">KEYCHAIN</p>
-        </div>
-        <div>
-          <div class="boks5">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/hairclip.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">50 kr</h4>
-          <p class="bokstext">HAIRCLIP</p>
-        </div>
-        <div>
-          <div class="boks6">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/sparkle.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">30 kr</h4>
-          <p class="bokstext">RAINBOW STICKERS</p>
-        </div>
-        <div>
-          <div class="boks7">
-            <div class="gridcircle3">
-              <div class="circle1"></div>
-              <div class="circle2"></div>
-              <div class="circle3"></div>
-            </div><img src="../../../public/img/stickers.jpeg" class="stickersbox" />
-          </div>
-          <h4 class="boksprice">30 kr</h4>
-          <p class="bokstext">STICKERS</p>
-        </div>
-      </div>
-    </div>
-
     <Footer />
   </body>
 </html>
 <style>
+  .body {
+    margin-top: 100px;
+  }
   .grid {
     display: grid;
     grid-template-columns: 1fr;
