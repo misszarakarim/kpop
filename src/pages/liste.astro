@@ -7,6 +7,8 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
   },
 }).then((res) => res.json());
 
+const maxProductsToShow = 10;
+
 import "../global_css/style.css";
 import BigBoxListe from "../components/BigBoxListe.astro";
 import ListeBox from "../components/ListeBox.astro";
@@ -15,6 +17,7 @@ import Knap from "../components/Knap.astro";
 import ListeText from "../components/ListeText.astro";
 import Nav from "../components/Nav.astro";
 import Tal from "../components/Tal.astro";
+import Listegrid from "../components/Listegrid.astro";
 ---
 
 <html lang="en">
@@ -30,17 +33,30 @@ import Tal from "../components/Tal.astro";
     <BigBoxListe />
     <ListeText />
     <Search />
-    <Knap />
-    <section class="shows">
-      {
-        data.map((show) => {
-          return <Pas data={show} />;
-        })
-      }
-
-      <!-- <ListeBox /> -->
-      <Tal />
-    </section>
+    <div class="grid">
+      <Knap />
+      <Listegrid>
+        {
+          data.slice(0, maxProductsToShow).map((show) => {
+            return <ListeBox data={show} />;
+          })
+        }
+      </Listegrid>
+    </div>
+    <Tal />
   </body>
-  <style></style>
 </html>
+
+<style>
+  /* tabet */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+  }
+</style>
