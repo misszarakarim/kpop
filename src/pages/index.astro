@@ -7,6 +7,8 @@ import Playbox from "../components/Playbox.astro";
 import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
 import Footer from "../components/Footer.astro";
+import Countdown from "../components/Countdown.astro";
+import Nav from "../components/Nav.astro";
 const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
   method: "GET",
   headers: {
@@ -24,6 +26,8 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <title>Astro</title>
   </head>
   <body>
+    <Nav />
+
     <Welcome />
 
     <Events />
@@ -31,6 +35,8 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
     <Photocard />
 
     <ForsideBox />
+
+    <Countdown />
 
     {
       data.map((show) => {
