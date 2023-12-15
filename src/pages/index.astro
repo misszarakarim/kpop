@@ -8,7 +8,14 @@ import "../global_css/style.css";
 import Pas from "../components/Pas.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import Sale from "../components/Sale.astro";
+import Countdown from "../components/Countdown.astro";
+import Nav from "../components/Nav.astro";
+const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro",
+  },
+}).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -21,6 +28,7 @@ import Sale from "../components/Sale.astro";
   </head>
   <body>
     <Nav />
+
     <Welcome />
 
     <Events />
@@ -29,6 +37,13 @@ import Sale from "../components/Sale.astro";
     <Sale />
     <ForsideBox />
 
+    <Countdown />
+
+    {
+      data.map((show) => {
+        return <Pas data={show} />;
+      })
+    }
     <h1>Astro</h1>
     <footer>
       <div class="foot">
