@@ -40,7 +40,7 @@
     position: relative;
   }
   svg {
-    position: absolute;
+    position: relative;
     bottom: 0;
     z-index: -1;
     width: 100%;
@@ -66,5 +66,40 @@
   }
   p {
     line-height: 45px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .foot {
+      margin-top: 250px;
+      position: relative;
+    }
+    svg {
+      position: relative;
+      bottom: 0;
+      z-index: -1;
+      width: 300%;
+      height: auto;
+    }
+    h4 {
+      margin-bottom: 25px;
+      font-weight: 800;
+      font-size: larger;
+    }
+
+    .footergrid {
+      z-index: 10;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-left: 150px;
+    }
+    .footerboks {
+      margin-right: 80px;
+      margin-top: 0px;
+      margin-bottom: 70px;
+    }
+    p {
+      line-height: 45px;
+    }
   }
 </style>
