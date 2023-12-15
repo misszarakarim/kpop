@@ -33,14 +33,30 @@ import Listegrid from "../components/Listegrid.astro";
     <BigBoxListe />
     <ListeText />
     <Search />
-    <Knap />
-    <Listegrid>
-      {
-        data.slice(0, maxProductsToShow).map((show) => {
-          return <ListeBox data={show} />;
-        })
-      }
-    </Listegrid>
+    <div class="grid">
+      <Knap />
+      <Listegrid>
+        {
+          data.slice(0, maxProductsToShow).map((show) => {
+            return <ListeBox data={show} />;
+          })
+        }
+      </Listegrid>
+    </div>
     <Tal />
   </body>
 </html>
+
+<style>
+  /* tabet */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+  }
+</style>
