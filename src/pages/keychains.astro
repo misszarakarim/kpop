@@ -1,13 +1,11 @@
 ---
 import Pas from "../components/Pas.astro";
-const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
+const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1?type=eq.Keychain", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmendlaGhlenl0Y3BsZnJqaXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEzMzY3MjUsImV4cCI6MjAxNjkxMjcyNX0.62QPSzQ6gHyGM48Bk57sSp6VhZpjcycVkZu9aY1QPro",
   },
 }).then((res) => res.json());
-
-const maxProductsToShow = 10;
 
 import "../global_css/style.css";
 import BigBoxListe from "../components/BigBoxListe.astro";
@@ -37,7 +35,7 @@ import Listegrid from "../components/Listegrid.astro";
       <Knap />
       <Listegrid>
         {
-          data.slice(0, maxProductsToShow).map((show) => {
+          data.map((show) => {
             return <ListeBox data={show} />;
           })
         }
