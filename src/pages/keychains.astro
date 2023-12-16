@@ -16,6 +16,7 @@ import ListeText from "../components/ListeText.astro";
 import Nav from "../components/Nav.astro";
 import Tal from "../components/Tal.astro";
 import Listegrid from "../components/Listegrid.astro";
+import Footerft from "../components/Footerft.astro";
 ---
 
 <html lang="en">
@@ -42,19 +43,20 @@ import Listegrid from "../components/Listegrid.astro";
       </Listegrid>
     </div>
     <Tal />
+    <Footerft />
   </body>
+
+  <style>
+    /* tabet */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+    /* WEB */
+
+    @media only screen and (min-width: 1024px) {
+    }
+  </style>
 </html>
-
-<style>
-  /* tabet */
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr auto;
-  }
-  /* WEB */
-
-  @media only screen and (min-width: 1024px) {
-  }
-</style>
