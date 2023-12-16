@@ -1,7 +1,3 @@
----
-import Knap from "./Readmore.astro";
----
-
 <div class="box">
   <div class="gridnew">
     <h1>Get to know us ( ＾◡＾)っ</h1>
@@ -12,15 +8,16 @@ import Knap from "./Readmore.astro";
     </div>
   </div>
   <div class="box2">
-    <img class="imgpp" src="../../public/img/kolay.png" alt="" />
-    <Knap boxtext="Click here" />
+    <img class="imgpp" src="../../public/img/koko.png" alt="koko" />
+    <button class="readmore2"> Click Here</button>
   </div>
 
   <style>
+    /* MOBILE */
     .box {
       background: #d4fac2;
       border: 3px solid #c5117d;
-      border-radius: 25px;
+      border-radius: 50px;
       height: 204px;
       width: 463px;
       margin-top: -57%;
@@ -30,7 +27,7 @@ import Knap from "./Readmore.astro";
     .box2 {
       background: white;
       border: 3px solid #c5117d;
-      border-radius: 25px;
+      border-radius: 50px;
       height: 150px;
       width: 430px;
       display: grid;
@@ -39,23 +36,50 @@ import Knap from "./Readmore.astro";
       margin: 0 0 0 14px;
     }
 
+    .readmore2 {
+      background-color: rgb(173, 148, 224);
+      padding: 23px;
+      border-radius: 100px;
+      border: solid 3px rgb(89, 58, 151);
+      text-decoration: none;
+      color: white;
+      -webkit-text-stroke-color: rgb(89, 58, 151);
+      -webkit-text-stroke-width: 5px;
+      paint-order: stroke fill;
+      font-size: 106%;
+      display: flex;
+      justify-content: center;
+      margin-top: 26%;
+      width: 115%;
+      margin-left: 62%;
+    }
+
+    .imgpp[data-astro-cid-aehtz2ly][data-astro-cid-aehtz2ly] {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      border-radius: 20px;
+      margin: 3px 0 10px 14px;
+      height: auto;
+      width: 105%;
+    }
+
     .gridnew {
       display: flex;
       white-space: nowrap;
     }
 
-    .imgpp {
+    .imgpp[data-astro-cid-aehtz2ly] {
       grid-column: 1;
       grid-row: 1 / 3;
       border-radius: 20px;
-      margin: 10px 0 10px 10px;
+      margin: 3px 0 10px 14px;
       height: auto;
-      width: 90%;
+      width: 119%;
     }
 
     h1 {
-      margin: 0 0 0 20px;
-      font-size: 18px;
+      margin: 1px 0 0 34px;
+      font-size: 24px;
     }
     h3 {
       color: #ff60bb;
@@ -72,12 +96,12 @@ import Knap from "./Readmore.astro";
     .grid-circle {
       display: flex;
       column-gap: 3px;
-      margin: 7px 0 0 170px;
+      margin: 11px 0 0 91px;
     }
 
     .circle {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -97,36 +121,156 @@ import Knap from "./Readmore.astro";
       background-color: #ff6f9c; /* Color for the third circle */
     }
 
+    /* TABLET */
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .box {
+        background: #d4fac2;
+        border: 6px solid #c5117d;
+        border-radius: 50px;
+        height: 488px;
+        width: 698px;
+        margin-top: -32%;
+        margin-left: 1%;
+      }
+
+      .box2 {
+        background: white;
+        border: 6px solid #c5117d;
+        border-radius: 50px;
+        height: 360px;
+        width: 650px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 0 0 19px;
+      }
+
+      .readmore2 {
+        background-color: rgb(173, 148, 224);
+        padding: 23px;
+        border-radius: 100px;
+        border: solid 3px rgb(89, 58, 151);
+        text-decoration: none;
+        color: white;
+        -webkit-text-stroke-color: rgb(89, 58, 151);
+        -webkit-text-stroke-width: 5px;
+        paint-order: stroke fill;
+        font-size: 188%;
+        display: flex;
+        justify-content: center;
+        margin-top: 56%;
+        width: 112%;
+        margin-left: 75%;
+      }
+
+      h1 {
+        margin: 10px 0px 7px 25px;
+        font-size: 303%;
+      }
+
+      .grid-circle {
+        display: flex;
+        column-gap: 3px;
+        margin: 34px 0 0 88px;
+      }
+
+      .imgpp[data-astro-cid-aehtz2ly][data-astro-cid-aehtz2ly] {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        border-radius: 20px;
+        margin: 36px 0 10px 14px;
+        height: auto;
+        width: 150%;
+      }
+
+      .grid-circle {
+        display: flex;
+        column-gap: 3px;
+        margin: 32px 40px 0;
+      }
+
+      .circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 7px solid #c5117d;
+      }
+    }
+
     /* WEB */
 
     @media only screen and (min-width: 1024px) {
       .box {
-        width: 950px;
+        background: #d4fac2;
+        border: 4px solid #c5117d;
+        border-radius: 50px;
+        height: 183px;
+        width: 717px;
+        margin-top: -76%;
+        margin-left: 67%;
       }
+
       .box2 {
-        width: 900px;
+        background: white;
+        border: 4px solid #c5117d;
+        border-radius: 50px;
+        height: 125px;
+        width: 684px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 0 0 14px;
       }
 
-      .imgpp {
-        width: 120px;
+      .readmore2 {
+        background-color: rgb(173, 148, 224);
+        padding: 23px;
+        border-radius: 100px;
+        border: solid 3px rgb(89, 58, 151);
+        text-decoration: none;
+        color: white;
+        -webkit-text-stroke-color: rgb(89, 58, 151);
+        -webkit-text-stroke-width: 5px;
+        paint-order: stroke fill;
+        font-size: 152%;
+        display: flex;
+        justify-content: center;
+        margin-top: 8%;
+        width: 117%;
+        margin-left: 63%;
       }
 
-      h2 {
-        font-size: 40px;
-        margin: 20px 0 0 -130px;
+      .imgpp[data-astro-cid-aehtz2ly][data-astro-cid-aehtz2ly][data-astro-cid-aehtz2ly] {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        border-radius: 20px;
+        margin: -2px 0 10px 30px;
+        height: auto;
+        width: 55%;
       }
 
-      h3 {
-        margin: 0 0 0 -130px;
+      h1 {
+        margin: 1px 0 0 31px;
+        font-size: 24px;
       }
-
-      .timerpermanent {
-        width: 217px;
-        margin-left: -130px;
-      }
-
       .grid-circle {
-        margin: 15px 0 0 650px;
+        display: flex;
+        column-gap: 3px;
+        margin: 11px 0 0 342px;
+      }
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid #c5117d;
       }
     }
   </style>

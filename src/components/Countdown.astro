@@ -3,7 +3,7 @@
 ---
 
 <div>
-  <img src="../public/img/koen.png" class="ko" alt="ko" />
+  <img src="../public/img/countcow.png" class="ko" alt="ko" />
   <div class="grid-item">
     <h3>Countdown for next event</h3>
     <div class="grid-circle">
@@ -22,13 +22,14 @@
 </div>
 
 <style>
+  /* MOBILE */
   .grid-item {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 4px solid #c5117d;
-    background-color: #c2dcfa;
+    background-color: #d4c2fa;
     padding: 18px;
     padding-top: 18px;
     padding-left: 18px;
@@ -121,11 +122,11 @@
   }
 
   .ko {
-    width: 188%;
+    width: 55%;
     position: absolute;
-    top: 218%;
+    top: 263%;
     z-index: 1;
-    left: 69%;
+    left: 102%;
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -133,35 +134,45 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      border: 3px solid #c5117d;
-      background-color: #c2dcfa;
-      padding: 12px;
-      padding-top: 56px;
+      border: 6px solid #c5117d;
+      background-color: #d4c2fa;
+      padding: 31px;
+      padding-top: 31px;
+      padding-right: 31px;
+      padding-bottom: 31px;
+      padding-left: 31px;
+      padding-top: 31px;
+      padding-top: 226px;
+      padding-top: 226px;
+      padding-top: 78px;
       text-align: center;
-      border-radius: 21px;
-      margin: auto 32px;
+      margin-top: -161%;
+      margin-left: 98%;
+      width: 146%;
+      border-radius: 50px;
     }
 
     h3 {
-      font-size: 36px;
-      margin-right: 297px;
+      font-size: 363%;
+      margin-right: 515px;
       margin-bottom: 10px;
     }
 
     .countdown {
-      padding: 80px 350px;
+      padding: 179px 561px;
+      border: 6px solid #c5117d;
     }
 
     ul {
-      gap: 44px;
+      gap: 98px;
       position: absolute;
-      top: 40%;
-      left: 48%;
+      top: 44%;
+      left: 51%;
     }
 
     li {
       margin-bottom: -43px;
-      font-size: 24px;
+      font-size: 65px;
     }
 
     li span {
@@ -188,33 +199,83 @@
       justify-content: center;
       border: 3px solid #c5117d;
     }
+
+    .ko {
+      position: absolute;
+      top: 289%;
+      z-index: 1;
+      left: 151%;
+      width: 37%;
+    }
+
+    .circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 7px solid #c5117d;
+    }
+
+    .grid-circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px;
+      margin-left: 972px;
+      margin-top: -43px;
+      margin-bottom: 18px;
+    }
   }
+
+  /* WEB */
 
   @media only screen and (min-width: 1024px) {
     .ko {
-      width: 44%;
+      width: 19%;
       position: absolute;
       top: 295%;
       z-index: 1;
-      left: 37%;
-      top: 2398px;
-    }
-    .countdown {
-      border-radius: 50px;
+      left: 42%;
+      top: 221%;
     }
 
     .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 4px solid #c5117d;
+      background-color: #d4c2fa;
+      padding: 18px;
+      padding-top: 18px;
+      padding-left: 18px;
+      padding-top: 18px;
+      padding-left: 18px;
+      padding-top: 18px;
+      padding-left: 18px;
+      padding-top: 18px;
+      padding-left: 18px;
+      padding-top: 18px;
+      padding-left: 18px;
+      padding-top: 155px;
+      text-align: center;
       border-radius: 50px;
-    }
-
-    .grid-item {
-      margin: auto 269px;
-      margin-top: 11%;
+      margin: auto -100px;
+      margin-top: auto;
+      margin-left: -100px;
+      margin-top: auto;
+      margin-left: -100px;
+      margin-left: -100px;
+      margin-left: -100px;
+      padding-left: 3%;
+      margin-left: 2%;
+      width: 96%;
+      margin-top: -55%;
     }
 
     h3 {
       font-size: 40px;
-      margin-right: 450px;
+      margin-right: 969px;
       margin-top: -12px;
       white-space: nowrap;
       position: absolute;
@@ -222,44 +283,63 @@
     }
 
     .countdown {
-      padding: 80px 430px;
-    }
-
-    ul {
-      gap: 44px;
-      position: absolute;
-      top: 40%;
-      left: 52%;
+      position: relative;
+      border: 4px solid #c5117d;
+      border-radius: 50px;
+      background-color: #fff;
+      padding: 118px 664px;
+      margin-left: -2%;
     }
 
     li {
-      margin-bottom: -43px;
-      font-size: 24px;
+      display: inline-block;
+      font-family: "zcool", sans-serif;
+      margin-left: 46px;
+      margin-bottom: 10px;
+      font-size: 73px;
     }
 
-    li span {
+    #days {
       display: block;
       margin-top: 0.5em;
-      font-size: 88px;
+      font-size: 57px;
+    }
+
+    #minutes {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 57px;
+    }
+
+    #hours {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 57px;
+    }
+
+    #seconds {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 57px;
     }
 
     .grid-circle {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3px;
-      margin-left: 745px;
-      margin-top: -30px;
-      margin-bottom: 21px;
+      margin-left: 1237px;
+      margin-top: -132px;
+      margin-bottom: 28px;
     }
 
     .circle {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 3px solid #c5117d;
+      border: 4px solid #c5117d;
     }
   }
 </style>
@@ -275,8 +355,8 @@
       dd = String(today.getDate()).padStart(2, "0"),
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
-      nextYear = 2022 + 1,
-      dayMonth = "12/18/",
+      nextYear = 2023 + 1,
+      dayMonth = "02/18/",
       birthday = dayMonth + nextYear; // Use nextYear here
 
     const countDown = new Date(birthday).getTime(),
