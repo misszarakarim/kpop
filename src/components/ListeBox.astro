@@ -1,9 +1,18 @@
 ---
 const { data } = Astro.props;
+
+// Generering af random farver til boksene <3 //
+const getRandomColor = () => {
+  const availableColors = ["#FAC2C9", "#D4C2FA", "#F9FAC2", "#D4FAC2", "#C2DCFA"];
+  const randomIndex = Math.floor(Math.random() * availableColors.length);
+  return availableColors[randomIndex];
+};
+
+const boxStyle = { backgroundColor: getRandomColor() };
 ---
 
 <a href={`/shows/${data.slug}`}>
-  <div class="box">
+  <div class="box" style={boxStyle}>
     <div class="grid-circle">
       <div class="circle circle1"></div>
       <div class="circle circle2"></div>
@@ -17,7 +26,6 @@ const { data } = Astro.props;
 
 <style>
   .box {
-    background-color: aqua;
     width: 170px;
     height: 190px;
     border: 3px solid #c5117d;
