@@ -14,6 +14,25 @@
         <div class="footerboks">
           <h4>FOLLOW US ONLINE</h4>
           <p class="pabout">Follow our socials to keep updated on the latest products, events, packing videos & much more!</p>
+       
+            <div class="gridsocials">
+                <div>
+            <a href="https://www.instagram.com/thekorner_dk/">
+              <img class="insta" src="../public/img/ig.png" alt="instagram" />
+            </a>
+            </div>
+            <div>
+            <a href="https://www.facebook.com/thekornerdk">
+              <img class="face" src="../public/img/fb.png" alt="facebook" />
+            </a>
+            </div>
+            <div>
+
+            <a href="https://www.tiktok.com/@thekornerdk">
+              <img class="tik" src="../public/img/tt.png" alt="tiktok" />
+            </a>
+            </div>
+            </div>
         </div>
         <div class="footerboks">
           <h4>OTHER</h4>
@@ -66,6 +85,23 @@
     margin-bottom: -24px;
   }
 
+    .insta {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .face{
+           width: 45px;
+      height: 45px;
+    }
+    .tik{
+           width: 45px;
+      height: 45px;
+    }
+    .gridsocials{
+        display: grid;
+grid-template-columns: 1fr 1fr 1fr;  
+    }
   .footerboks {
     margin-top: 0px;
     margin-bottom: 70px;
@@ -87,7 +123,23 @@
       background: #ffbad3;
       margin: 0;
     }
-
+    .insta {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .face{
+           width: 50px;
+      height: 50px;
+    }
+    .tik{
+           width: 50px;
+      height: 50px;
+    }
+    .gridsocials{
+        display: grid;
+grid-template-columns: 1fr 1fr 1fr;  
+    }
     .shape {
       position: relative;
       top: 41px;
@@ -127,7 +179,7 @@
     p {
       line-height: 45px;
     }
-  }
+  
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .footer {
