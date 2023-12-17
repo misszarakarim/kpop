@@ -3,6 +3,10 @@
     <div class="logo">
       <a href="/"> <img src="../../img/logo1.png" alt="Logo" /></a>
     </div>
+
+    <div class="logoalt">
+      <a href="/"> <img src="../../img/logoooo.png" alt="Logo" /></a>
+    </div>
     <div class="menu-container">
       <button type="button" class="btn-hamburger" data-action="nav-toggle">
         <span></span>
@@ -94,6 +98,9 @@
       align-items: center;
     }
 
+    .logoalt {
+      display: none;
+    }
     .nav-item > a {
       padding: 0 1.5em;
       color: #c5117d;
@@ -272,6 +279,12 @@
         display: block;
       }
 
+      .logoalt {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+
       .logo {
         width: 70%;
         display: flex;
@@ -325,6 +338,12 @@
 
       nav .btn-hamburger {
         display: block;
+      }
+      .logoalt {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: 50%;
       }
 
       .logo {
