@@ -1,40 +1,38 @@
-<div id="wrap">
-  <nav>
-    <div class="logo">
-      <a href="/"> <img src="../../img/logo1.png" alt="Logo" /></a>
-    </div>
+<nav>
+  <div class="logo">
+    <a href="/"> <img src="../../img/logo1.png" alt="Logo" /></a>
+  </div>
 
-    <div class="logoalt">
-      <a href="/"> <img src="../../img/logoooo.png" alt="Logo" /></a>
-    </div>
-    <div class="menu-container">
-      <button type="button" class="btn-hamburger" data-action="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
-        <li class="nav-item kpop dropdown dropbtn">
-          <a href="/kpop/" data-action="dropdown-toggle">Kpop</a>
-        </li>
-        <li class="nav-item groups dropdown group">
-          <a href="/groups/" data-action="dropdown-toggle">Groups</a>
-        </li>
-        <li class="nav-item recycle dropdown">
-          <a href="/recycle/" data-action="dropdown-toggle">Recycle</a>
-        </li>
-        <li class="nav-item artist dropdown">
-          <a href="/artist/" data-action="dropdown-toggle">Artist</a>
-        </li>
-        <li class="nav-item other dropdown">
-          <a href="/other/" data-action="dropdown-toggle">Other</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+  <div class="logoalt">
+    <a href="/"> <img src="../../img/logoooo.png" alt="Logo" /></a>
+  </div>
+  <div class="menu-container">
+    <button type="button" class="btn-hamburger" data-action="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu">
+      <li class="nav-item kpop dropdown dropbtn">
+        <a href="/kpop/" data-action="dropdown-toggle">Kpop</a>
+      </li>
+      <li class="nav-item groups dropdown group">
+        <a href="/groups/" data-action="dropdown-toggle">Groups</a>
+      </li>
+      <li class="nav-item recycle dropdown">
+        <a href="/recycle/" data-action="dropdown-toggle">Recycle</a>
+      </li>
+      <li class="nav-item artist dropdown">
+        <a href="/artist/" data-action="dropdown-toggle">Artist</a>
+      </li>
+      <li class="nav-item other dropdown">
+        <a href="/other/" data-action="dropdown-toggle">Other</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <style>
   nav {
@@ -287,7 +285,7 @@
     }
 
     .logo {
-      width: 70%;
+      width: 0%;
       display: flex;
     }
 
@@ -321,7 +319,21 @@
       width: 100%;
       font-size: 1.5rem;
     }
+    .logoalt {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-right: 70%;
+    }
 
+    .logo {
+      width: 100%;
+      display: flex;
+    }
+
+    .logo img {
+      display: none;
+    }
     nav.opened .nav-menu {
       bottom: 0;
     }
@@ -348,7 +360,7 @@
     }
 
     .logo {
-      width: 70%;
+      width: 50%;
       display: flex;
     }
     .nav-item > a:hover::before,

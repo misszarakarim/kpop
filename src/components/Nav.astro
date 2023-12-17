@@ -300,10 +300,10 @@
 
   @media screen and (max-width: 768px) {
     nav .nav-menu {
-      position: absolute;
-      left: 0px;
-      right: -6px;
-      top: -41px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
       bottom: 100%;
       display: flex;
       flex-direction: column;
@@ -311,6 +311,7 @@
       background-color: #ffbad3;
       transition: bottom 0.5s ease-in-out;
       overflow: hidden;
+      width: 100%;
       font-size: 1.5rem;
     }
 
