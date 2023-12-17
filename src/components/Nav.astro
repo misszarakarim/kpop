@@ -2,6 +2,10 @@
   <div class="logo">
     <a href="/"> <img src="../img/logo1.png" alt="Logo" /></a>
   </div>
+
+  <div class="logoalt">
+    <a href="/"> <img src="../img/logoooo.png" alt="Logo" /></a>
+  </div>
   <div class="menu-container">
     <button type="button" class="btn-hamburger" data-action="nav-toggle">
       <span></span>
@@ -11,9 +15,6 @@
       <span></span>
     </button>
     <ul class="nav-menu">
-      <li>
-        <a href="/"> <img src="../img/logo1.png" alt="Logo" /></a>
-      </li>
       <li class="nav-item kpop dropdown dropbtn">
         <a href="/kpop/" data-action="dropdown-toggle">Kpop</a>
       </li>
@@ -88,6 +89,10 @@
   .nav-menu {
     display: flex;
     align-items: center;
+  }
+
+  .logoalt {
+    display: none;
   }
 
   .nav-item > a {
@@ -269,9 +274,10 @@
       margin-top: 30px;
     }
 
-    .logo {
-      width: 70%;
+    .logoalt {
       display: flex;
+      justify-content: center;
+      width: 50%;
     }
 
     .logo img {
@@ -325,6 +331,12 @@
       margin-top: 50px;
     }
 
+    .logoalt {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-right: 50%;
+    }
     .logo {
       width: 70%;
       display: flex;
