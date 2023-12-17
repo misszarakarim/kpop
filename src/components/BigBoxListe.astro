@@ -1,8 +1,12 @@
+---
+const { h1, p } = Astro.props;
+---
+
 <div>
   <div class="bigbox"></div>
   <div class="bigboxtext">
-    <h1>Kpop Corner</h1>
-    <p class="p-text">Home/Kpop Corner</p>
+    <h1>{h1}</h1>
+    <p class="p-text">{p}</p>
   </div>
 </div>
 

@@ -1,0 +1,229 @@
+---
+const { data } = Astro.props;
+---
+
+<div class="bb">
+  <a href="#" class="button1"><p>Nails</p></a>
+  <a href="#" class="button2"><p>Washitape</p></a>
+  <a href="#" class="button3"><p>Keychains</p></a>
+  <a href="/accessories/" class="button4"><p>Accessories</p></a>
+  <a href="/stationary/" class="button5"><p>Stationary</p></a>
+</div>
+
+<img class="pink" src="../img/pinkstreg.png" alt="" />
+
+<style>
+  /* MOBILE */
+  .pink {
+    display: none;
+  }
+
+  .bb {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 13px;
+    height: 37vh;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4%;
+    padding-top: 10%;
+    padding-bottom: 6%;
+    margin-bottom: 23%;
+  }
+
+  a {
+    width: 171px;
+    height: 62px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid #c5117d;
+    border-radius: 30px;
+    margin-bottom: 12px;
+  }
+
+  a p {
+    width: 150px;
+    height: 76px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    font-family: "zcool";
+    color: white;
+    -webkit-text-stroke-color: #c5117d;
+    -webkit-text-stroke-width: 5px;
+    paint-order: stroke fill;
+    margin-left: 4%;
+    margin-top: 6%;
+    text-align: center;
+  }
+
+  .button1 {
+    background-color: #fac2c9;
+    margin-bottom: 10%;
+  }
+
+  .button2 {
+    background-color: #d4c2fa;
+    margin-bottom: 10%;
+  }
+
+  .button3 {
+    background-color: #f9fac2;
+  }
+
+  .button4 {
+    background-color: #d4fac2;
+  }
+
+  .button5 {
+    grid-column: 1 / span 2;
+    background-color: #c2dcfa;
+    margin-top: 1%;
+    margin-left: 25%;
+  }
+
+  /* TABLET */
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .pink {
+      width: 35%;
+      position: absolute;
+      top: 69%;
+      left: 1%;
+      z-index: -1;
+      display: block;
+    }
+
+    .bb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0%;
+      margin-bottom: 11%;
+      margin-left: 12%;
+      margin-top: 9%;
+      gap: 55px;
+      height: 85vh;
+    }
+
+    a {
+      width: 192px;
+      height: 62px;
+      cursor: pointer;
+      font-size: 23px;
+      font-weight: bold;
+      border: 3px solid #c5117d;
+      border-radius: 30px;
+      margin-bottom: 12px;
+    }
+
+    a p {
+      margin-left: 10%;
+    }
+
+    .button1 {
+      background-color: #fac2c9;
+    }
+
+    .button2 {
+      background-color: #d4c2fa;
+      margin-top: -16%;
+    }
+
+    .button3 {
+      background-color: #f9fac2;
+      margin-top: -16%;
+    }
+
+    .button4 {
+      background-color: #d4fac2;
+      margin-top: -10%;
+    }
+
+    .button5 {
+      grid-column: 1 / span 2;
+      background-color: #c2dcfa;
+      margin-top: -10%;
+      margin-left: 0%;
+    }
+
+    .dot {
+      border-top: 3px dashed #e596cb;
+      height: 25px;
+      width: 34%;
+      margin-top: 3%;
+      margin-bottom: 1%;
+      margin-left: 3%;
+    }
+  }
+
+  /* WEB */
+
+  @media only screen and (min-width: 1024px) {
+    .pink {
+      width: 22%;
+      position: absolute;
+      top: 113%;
+      left: 7%;
+      z-index: -1;
+      display: block;
+    }
+
+    .bb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0%;
+      margin-bottom: 13%;
+      margin-right: 34%;
+      margin-top: 10%;
+      gap: 85px;
+      height: 117vh;
+    }
+
+    a {
+      width: 192px;
+      height: 62px;
+      cursor: pointer;
+      font-size: 23px;
+      font-weight: bold;
+      border: 3px solid #c5117d;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    a p {
+      margin-left: 10%;
+    }
+
+    .button1 {
+      background-color: #fac2c9;
+    }
+
+    .button2 {
+      background-color: #d4c2fa;
+      margin-top: -16%;
+    }
+
+    .button3 {
+      background-color: #f9fac2;
+      margin-top: -16%;
+    }
+
+    .button4 {
+      background-color: #d4fac2;
+      margin-top: -10%;
+    }
+
+    .button5 {
+      grid-column: 1 / span 2;
+      background-color: #c2dcfa;
+      margin-top: -10%;
+      margin-left: 0%;
+    }
+  }
+</style>
