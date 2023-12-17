@@ -27,8 +27,8 @@ import Footerft from "../components/Footerft.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
+  <Nav />
   <body>
-    <Nav />
     <BigBoxListe h1="K-pop" p="K-pop Korner" />
     <ListeText />
     <Search />
@@ -43,29 +43,29 @@ import Footerft from "../components/Footerft.astro";
       </Listegrid>
     </div>
     <Tal />
-    <Footerft />
   </body>
+  <Footerft />
+
+  <style>
+    /* Hide grid for screens smaller than 768px */
+    .grid {
+      display: block;
+      margin-bottom: 50px;
+    }
+    /* Tablet styles (768px to 1023px) */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Web styles (1024px and above) */
+    @media only screen and (min-width: 1024px) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </html>
-
-<style>
-  /* Hide grid for screens smaller than 768px */
-  .grid {
-    display: block;
-    margin-bottom: 50px;
-  }
-  /* Tablet styles (768px to 1023px) */
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  /* Web styles (1024px and above) */
-  @media only screen and (min-width: 1024px) {
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-</style>
