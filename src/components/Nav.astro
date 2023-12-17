@@ -1,7 +1,7 @@
 <div id="wrap">
   <nav>
     <div class="logo">
-      <a href="/">Logo here</a>
+      <a href=""> <img src="../public/img/logo1.png" alt="Logo" /></a>
     </div>
     <div class="menu-container">
       <button type="button" class="btn-hamburger" data-action="nav-toggle">
@@ -73,14 +73,17 @@
       align-items: center;
       justify-content: flex-start;
       width: 30%;
-      margin-top: 25px;
-      margin-left: 46px;
+      margin-top: 121px;
+      margin-left: -85px;
+      margin-right: 8%;
     }
 
     .logo img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
+
     .menu-container {
       display: flex;
       align-items: center;
@@ -291,6 +294,10 @@
         display: flex;
       }
 
+      .logo img {
+        display: none;
+      }
+
       .nav-item > a:hover::before,
       .nav-item.kpop > a:hover::before,
       .nav-item.groups > a:hover::before,
@@ -348,6 +355,10 @@
       .nav-item.artist > a:hover::before,
       .nav-item.other > a:hover::before {
         content: none;
+      }
+
+      .logo img {
+        display: none;
       }
     }
   </style>
