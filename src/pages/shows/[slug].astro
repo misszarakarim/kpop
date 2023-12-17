@@ -1,6 +1,6 @@
 ---
 import "../../global_css/style.css";
-import Footer from "../../components/Footerft.astro";
+import Footerslug from "../../components/Footerslug.astro";
 import Navslug from "../../components/Navslug.astro";
 export async function getStaticPaths() {
   const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
@@ -200,7 +200,7 @@ console.log(myData);
         </div>
       </div>
     </div>
-    <Footer />
+    <Footerslug />
   </body>
 </html>
 <style>
