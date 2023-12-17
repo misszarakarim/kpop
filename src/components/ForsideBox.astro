@@ -8,7 +8,11 @@
         <div class="circle circle3"></div>
       </div>
     </div>
-    <div class="inner-box"></div>
+    <div class="inner-box">
+      <a href="https://www.instagram.com/thekorner_dk/">
+        <img class="insta" src="../public/img/ig.png" alt="instagram" />
+      </a>
+    </div>
   </div>
 
   <div class="box boxface">
@@ -20,7 +24,11 @@
         <div class="circle circle3"></div>
       </div>
     </div>
-    <div class="inner-box"></div>
+    <div class="inner-box">
+      <a href="https://www.facebook.com/thekornerdk">
+        <img class="face" src="../public/img/fb.png" alt="facebook" />
+      </a>
+    </div>
   </div>
 
   <div class="box boxtiktok">
@@ -32,23 +40,136 @@
         <div class="circle circle3"></div>
       </div>
     </div>
-    <div class="inner-box"></div>
+    <div class="inner-box">
+      <a href="https://www.facebook.com/thekornerdk">
+        <img class="face" src="../public/img/fb.png" alt="facebook" />
+      </a>
+    </div>
   </div>
 </div>
 
-<a href="https://www.instagram.com/thekorner_dk/">
-  <img class="insta" src="../public/img/ig.png" alt="instagram" />
-</a>
-
-<a href="https://www.facebook.com/thekornerdk">
-  <img class="face" src="../public/img/fb.png" alt="facebook" />
-</a>
-
-<a href="https://www.tiktok.com/@thekornerdk">
-  <img class="tik" src="../public/img/tt.png" alt="tiktok" />
-</a>
-
 <style>
+  /* MOBILE */
+
+  .overall {
+    display: flex;
+    gap: 32px;
+    padding: 7px;
+    padding-left: 7px;
+    margin-top: -9%;
+    padding-left: 2%;
+  }
+
+  .box {
+    position: relative;
+    width: 251px;
+    height: 197px;
+    border: 4px solid #c5117d;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+  }
+
+  .boxig {
+    background-color: #f9fac2;
+  }
+
+  .boxface {
+    background-color: #c2dcfa;
+  }
+
+  .boxtiktok {
+    background-color: #fac2c9;
+  }
+
+  .inner-box {
+    width: 113%;
+    height: 86%;
+    margin-top: -82px;
+    background-color: #fff;
+    border-radius: 51px;
+    border: 4px solid #c5117d;
+    margin-left: -6%;
+  }
+
+  .insta {
+    width: 21%;
+    height: auto;
+    position: absolute;
+    left: 34%;
+    top: 211%;
+  }
+
+  .face {
+    width: 21%;
+    height: auto;
+    position: absolute;
+    left: 120%;
+    top: 211%;
+  }
+  .tik {
+    width: 21%;
+    height: auto;
+    position: absolute;
+    left: 207%;
+    top: 211%;
+  }
+  .box img {
+    position: absolute;
+    top: 104px;
+    left: 130px;
+    width: 51%;
+    height: auto;
+    object-fit: cover;
+  }
+  h2 {
+    margin-top: -6%;
+    margin-left: 4%;
+  }
+
+  .grid-circle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    margin-right: -132px;
+    margin-top: -49px;
+    margin-bottom: 6px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #c5117d;
+  }
+
+  .circle1 {
+    background-color: #b1fef5;
+  }
+
+  .circle2 {
+    background-color: #c8ffa7;
+  }
+
+  .circle3 {
+    background-color: #ff6f9c;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+    border-radius: 21%;
+    margin-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 16%;
+  }
+
   /* WEB */
   @media only screen and (min-width: 1024px) {
     .overall[data-astro-cid-7owr6sbe] {
@@ -153,18 +274,13 @@
   /* TABLET */
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .overall[data-astro-cid-7owr6sbe] {
-      display: grid;
-      gap: 108px;
-      padding: 210px;
-      padding-left: 7px;
-      margin-top: -9%;
-      padding-left: 1%;
-      margin-left: 6px;
-      grid-template-columns: repeat(3, 1fr);
+    .overall {
+      display: flex;
+      gap: 104px;
+      margin-top: 33px;
     }
 
-    .box[data-astro-cid-7owr6sbe] {
+    .box {
       position: relative;
       width: 538px;
       height: 432px;
@@ -180,7 +296,7 @@
       margin-left: -1%;
     }
 
-    .circle[data-astro-cid-7owr6sbe] {
+    .circle {
       width: 35px;
       height: 35px;
       border-radius: 50%;
@@ -214,7 +330,7 @@
       top: 258%;
     }
 
-    .grid-circle[data-astro-cid-7owr6sbe] {
+    .grid-circle {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3px;
@@ -223,7 +339,7 @@
       margin-bottom: 6px;
     }
 
-    .inner-box[data-astro-cid-7owr6sbe] {
+    .inner-box {
       width: 110%;
       height: 91%;
       margin-top: -120px;
@@ -244,126 +360,5 @@
     .boxtiktok {
       background-color: #fac2c9;
     }
-  }
-
-  /* MOBILE */
-
-  .overall {
-    display: flex;
-    gap: 32px;
-    padding: 7px;
-    padding-left: 7px;
-    margin-top: -9%;
-    padding-left: 2%;
-  }
-
-  .box {
-    position: relative;
-    width: 251px;
-    height: 197px;
-    border: 4px solid #c5117d;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 50px;
-  }
-
-  .boxig {
-    background-color: #f9fac2;
-  }
-
-  .boxface {
-    background-color: #c2dcfa;
-  }
-
-  .boxtiktok {
-    background-color: #fac2c9;
-  }
-
-  .inner-box {
-    width: 113%;
-    height: 86%;
-    margin-top: -82px;
-    background-color: #fff;
-    border-radius: 51px;
-    border: 4px solid #c5117d;
-    margin-left: -6%;
-  }
-
-  .insta {
-    width: 21%;
-    height: auto;
-    position: absolute;
-    left: 34%;
-    top: 211%;
-  }
-
-  .face {
-    width: 21%;
-    height: auto;
-    position: absolute;
-    left: 120%;
-    top: 211%;
-  }
-  .tik {
-    width: 21%;
-    height: auto;
-    position: absolute;
-    left: 207%;
-    top: 211%;
-  }
-  .box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  h2 {
-    margin-top: -6%;
-    margin-left: 4%;
-  }
-
-  .grid-circle {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3px;
-    margin-right: -132px;
-    margin-top: -49px;
-    margin-bottom: 6px;
-  }
-
-  .circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #c5117d;
-  }
-
-  .circle1 {
-    background-color: #b1fef5;
-  }
-
-  .circle2 {
-    background-color: #c8ffa7;
-  }
-
-  .circle3 {
-    background-color: #ff6f9c;
-  }
-
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px;
-    text-align: center;
-    border-radius: 21%;
-    margin-bottom: 32px;
-    padding-top: 30px;
-    padding-bottom: 16%;
   }
 </style>
