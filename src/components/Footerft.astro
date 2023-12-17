@@ -49,6 +49,7 @@
 </body>
 
 <style>
+  /* MOBILE */
   .footer {
     width: 260%;
     height: 120%;
@@ -115,6 +116,73 @@
     font-size: 20px;
   }
 
+  /* TABLET */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer {
+      width: 260%;
+      height: 100%;
+      position: relative;
+      background: #ffbad3;
+      margin: 0;
+    }
+
+    .shape {
+      position: relative;
+      top: 1px;
+      width: 260%;
+      padding-bottom: 40.8%;
+      background: #ffbad3;
+      clip-path: url("#clippy");
+      margin-top: 50px;
+    }
+
+    h4 {
+      margin-bottom: 25px;
+      font-size: 48px;
+    }
+
+    .footergrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 20px;
+      margin-right: 10px;
+      padding-bottom: 18px;
+      margin-bottom: -24px;
+      column-gap: 5%;
+    }
+
+    .footerboks {
+      margin-top: 0px;
+      margin-bottom: 70px;
+      margin-right: 100px;
+      height: 270px;
+      width: 450px;
+      margin-left: 250px;
+    }
+    p {
+      line-height: 35px;
+      font-size: 30px;
+    }
+
+    .insta {
+      width: 80px;
+      height: 80px;
+    }
+
+    .face {
+      width: 80px;
+      height: 80px;
+    }
+    .tik {
+      width: 80px;
+      height: 80px;
+    }
+    .gridsocials {
+      padding-bottom: 40px;
+    }
+  }
+
+  /* WEB */
   @media only screen and (min-width: 1024px) {
     .footer {
       width: 100%;
@@ -178,70 +246,6 @@
     }
     p {
       line-height: 45px;
-    }
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .footer {
-      width: 260%;
-      height: 100%;
-      position: relative;
-      background: #ffbad3;
-      margin: 0;
-    }
-
-    .shape {
-      position: relative;
-      top: 1px;
-      width: 260%;
-      padding-bottom: 40.8%;
-      background: #ffbad3;
-      clip-path: url("#clippy");
-      margin-top: 50px;
-    }
-
-    h4 {
-      margin-bottom: 25px;
-      font-size: 48px;
-    }
-
-    .footergrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-left: 274px;
-      margin-right: 10px;
-      padding-bottom: 0px;
-      margin-bottom: -24px;
-      column-gap: 15%;
-    }
-
-    .footerboks {
-      margin-top: 0px;
-      margin-bottom: 70px;
-      margin-right: 100px;
-      height: 270px;
-      width: 450px;
-      margin-left: 250px;
-    }
-    p {
-      line-height: 35px;
-      font-size: 30px;
-    }
-
-    .insta {
-      width: 80px;
-      height: 80px;
-    }
-
-    .face {
-      width: 80px;
-      height: 80px;
-    }
-    .tik {
-      width: 80px;
-      height: 80px;
-    }
-    .gridsocials {
-      padding-bottom: 40px;
     }
   }
 </style>
