@@ -3,20 +3,7 @@ const { data } = Astro.props;
 import Listegrid from "../components/Listegrid.astro";
 ---
 
-<a href={`/shows/${data.slug}`}>
-  <div class="grid-container">
-    <div class="grid-item">
-      <div class="grid-circle">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
-      </div>
-      <img src={data.img} class="img" alt="" />
-      <p class="kr">{data.price} DKK</p>
-      <p>{data.name}</p>
-    </div>
-  </div>
-</a>
+<a href={`/shows/${data.slug}`}> </a>
 
 <style>
   /* <!-- CIRCLE --> */

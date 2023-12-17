@@ -69,35 +69,67 @@ import Knap from "../components/Readmore.astro";
         <div class="circle circle3"></div>
         <p>J-hope birthday event - 12th February</p>
       </div>
+
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
+
+      <div class="past-event">
+        <div class="circle circle3"></div>
+        <p>J-hope birthday event - 12th February</p>
+      </div>
     </div>
     <Knap boxtext="Read more" />
   </div>
 </div>
 
 <style>
+  /* MOBILE */
+
   .box {
-    border: 3px solid #c5117d;
-    border-radius: 25px;
+    border: 4px solid #c5117d;
+    border-radius: 50px;
     background: #c2dcfa;
-    width: 200px;
-    height: 500px;
+    width: 502px;
+    height: 618px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 5%;
+    margin-top: 5%;
+    margin-top: 5%;
+    margin-top: 6%;
+    margin-top: 10%;
+    margin-top: 2%;
   }
 
   .box2 {
     background: white;
-    border: 3px solid #c5117d;
-    border-radius: 25px;
-    height: 400px;
-    margin: 0 10px;
+    border: 4px solid #c5117d;
+    border-radius: 50px;
+    height: 537px;
+    margin: 0px 10px;
     grid-column: 1 / 3;
     padding: 0 10px;
   }
-
   .scrollbox {
     overflow: scroll;
-    height: 300px;
+    height: 434px;
     margin-bottom: 10px;
   }
 
@@ -105,6 +137,7 @@ import Knap from "../components/Readmore.astro";
     text-align: center;
     text-decoration: underline;
     margin: 10px;
+    font-size: 41px;
   }
 
   .next-event,
@@ -114,13 +147,14 @@ import Knap from "../components/Readmore.astro";
     margin: 10px 0;
   }
   h1 {
-    margin: 15px 0 -15px 15px;
+    margin: 6px 0 -6px 29px;
+    font-size: 250%;
   }
 
   p {
     color: #400027;
     font-family: "zcool";
-    font-size: 12px;
+    font-size: 43px;
     margin-left: 10px;
   }
   .grid-circle {
@@ -130,13 +164,13 @@ import Knap from "../components/Readmore.astro";
     grid-row: 1;
     justify-self: end;
     align-self: start;
-    margin: 10px 15px;
+    margin: 16px 30px;
     grid-column: 2;
   }
 
   .circle {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -145,44 +179,131 @@ import Knap from "../components/Readmore.astro";
   }
 
   .circle1 {
-    background-color: #b1fef5; /* Color for the first circle */
+    background-color: #b1fef5;
   }
 
   .circle2 {
-    background-color: #c8ffa7; /* Color for the second circle */
+    background-color: #c8ffa7;
   }
 
   .circle3 {
-    background-color: #ff6f9c; /* Color for the third circle */
+    background-color: #ff6f9c;
   }
 
-  /* TABLET */ /* Ingen ændringer i ipad version, den passer fra mobil af */
+  /* TABLET */
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .box {
+      border: 6px solid #c5117d;
+      border-radius: 50px;
+      background: #c2dcfa;
+      width: 1058px;
+      height: 1326px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 2%;
+      margin-top: 5%;
+      margin-top: 5%;
+      margin-top: 5%;
+      margin-top: 6%;
+      margin-top: 10%;
+      margin-top: 2%;
+      margin-top: -1%;
+    }
+
+    .box2 {
+      background: white;
+      border: 6px solid #c5117d;
+      border-radius: 50px;
+      height: 1160px;
+      margin: 5px 23px 26px;
+      grid-column: 1 / 3;
+      padding: 0 10px;
+    }
+
+    h1 {
+      margin: 33px 0 27px 33px;
+      font-size: 363%;
+    }
+
+    .circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 7px solid #c5117d;
+    }
+
+    .grid-circle {
+      display: flex;
+      column-gap: 3px;
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+      align-self: start;
+      margin: 39px 37px;
+      grid-column: 2;
+    }
+
+    h3 {
+      text-align: center;
+      text-decoration: underline;
+      margin: 36px;
+      font-size: 365%;
+    }
+
+    .scrollbox {
+      overflow: scroll;
+      height: 996px;
+      margin-bottom: 10px;
+    }
+
+    .next-event,
+    .past-event {
+      display: flex;
+      flex-direction: row;
+      margin: 46px 0;
+    }
+
+    p {
+      color: #400027;
+      font-family: "zcool";
+      font-size: 43px;
+      margin-left: 155px;
+    }
+  }
 
   /* WEB */
 
   @media only screen and (min-width: 1024px) {
     .box {
-      width: 390px;
-      height: 712px;
+      width: 635px;
+      height: 742px;
       border-radius: 50px;
       border: 4px solid #c5117d;
       margin: 25px;
+      margin-left: 25px;
+      margin-left: 25px;
+      margin-left: 5%;
     }
 
     .box2 {
-      height: 606px;
-      width: 350px;
+      height: 624px;
+      width: 588px;
       margin: 0 20px;
+      margin-left: 20px;
       margin-left: 20px;
       border-radius: 50px;
       border: 4px solid #c5117d;
-      margin-left: 4%;
+      margin-left: 3%;
     }
 
     .scrollbox {
-      height: 500px;
+      height: 542px;
       overflow-x: hidden;
-      margin: 0 10px 0 10px;
+      margin: -2px 134px 0 143px;
     }
 
     h3 {
@@ -216,13 +337,13 @@ import Knap from "../components/Readmore.astro";
     }
 
     .circle {
-      width: 17px;
-      height: 17px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 3px solid #c5117d;
+      border: 4px solid #c5117d;
     }
   }
 </style>

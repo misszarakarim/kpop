@@ -5,9 +5,10 @@ const boxtext = Astro.props.boxtext;
 <a href="" class="readmore">{boxtext}</a>
 
 <style>
+  /* MOBILE */
   .readmore {
     background-color: rgb(173, 148, 224);
-    padding: 10px 15px;
+    padding: 6px;
     border-radius: 100px;
     border: solid 3px rgb(89, 58, 151);
     text-decoration: none;
@@ -15,11 +16,35 @@ const boxtext = Astro.props.boxtext;
     -webkit-text-stroke-color: rgb(89, 58, 151);
     -webkit-text-stroke-width: 5px;
     paint-order: stroke fill;
-    font-size: larger;
+    font-size: 218%;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
+    width: 82%;
+    margin-left: 9%;
   }
 
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .readmore {
+      background-color: rgb(173, 148, 224);
+      padding: 21px 1px;
+      border-radius: 100px;
+      border: solid 3px rgb(89, 58, 151);
+      text-decoration: none;
+      color: white;
+      -webkit-text-stroke-color: rgb(89, 58, 151);
+      -webkit-text-stroke-width: 5px;
+      paint-order: stroke fill;
+      font-size: 344%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+      width: 75%;
+      margin-left: 11%;
+    }
+  }
+
+  /* WEB */
   @media only screen and (min-width: 1024px) {
     .readmore {
       margin: 0 50px 0 50px;
