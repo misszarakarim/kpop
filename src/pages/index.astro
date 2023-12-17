@@ -8,7 +8,7 @@ import Countdown from "../components/Countdown.astro";
 import Sale from "../components/Sale.astro";
 import Nav from "../components/Nav.astro";
 import Greet from "../components/Greet.astro";
-import Footerft from "../components/Footerft.astro";
+import Footerinde from "../components/Footerinde.astro";
 const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/thekorner1", {
   method: "GET",
   headers: {
@@ -37,7 +37,7 @@ const data = await fetch("https://hfzwehhezytcplfrjivm.supabase.co/rest/v1/theko
       <div class="div5"><Greet /> </div>
     </div>
     <Countdown />
-    <Footerft />
+    <Footerinde />
   </body>
 </html>
 
