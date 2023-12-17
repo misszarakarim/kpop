@@ -53,11 +53,14 @@ import Footerft from "../components/Footerft.astro";
     }
     .grid {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr 1fr;
     }
-    /* WEB */
-
+    /* Web styles (1024px and above) */
     @media only screen and (min-width: 1024px) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </html>

@@ -3,16 +3,17 @@ const { data } = Astro.props;
 ---
 
 <div class="bb">
-  <a href="/kpopalbum/" class="button1">Albums</a>
-  <a href="#" class="button2">Posters</a>
-  <a href="/photocards/" class="button3">Photocards</a>
-  <a href="/kpopacce/" class="button4">Accessories</a>
-  <a href="/kpopstat/" class="button5">Stationary</a>
+  <a href="/kpopalbum/" class="button1"><p>Album</p></a>
+  <a href="#" class="button2"><p>Posters</p></a>
+  <a href="/photocards/" class="button3"><p>Photocards</p></a>
+  <a href="/kpopacce/" class="button4"><p>Accessories</p></a>
+  <a href="/kpopstat/" class="button5"><p>Stationary</p></a>
 </div>
 
 <img class="pink" src="../img/pinkstreg.png" alt="" />
 
 <style>
+  /* MOBILE */
   .pink {
     display: none;
   }
@@ -21,29 +22,41 @@ const { data } = Astro.props;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 13px;
     height: 37vh;
     align-items: center;
     justify-content: center;
-    padding-left: 7%;
+    padding-left: 4%;
     padding-top: 10%;
     padding-bottom: 6%;
-    margin-bottom: 20%;
+    margin-bottom: 23%;
   }
 
   a {
-    width: 150px;
-    height: 60px;
+    width: 171px;
+    height: 62px;
     cursor: pointer;
-    font-size: 26px;
     font-weight: bold;
     border: 3px solid #c5117d;
+    border-radius: 30px;
+    margin-bottom: 12px;
+  }
+
+  a p {
+    width: 150px;
+    height: 76px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
     border-radius: 30px;
     font-family: "zcool";
     color: white;
     -webkit-text-stroke-color: #c5117d;
     -webkit-text-stroke-width: 5px;
     paint-order: stroke fill;
+    margin-left: 4%;
+    margin-top: 6%;
+    text-align: center;
   }
 
   .button1 {
@@ -67,44 +80,48 @@ const { data } = Astro.props;
   .button5 {
     grid-column: 1 / span 2;
     background-color: #c2dcfa;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 25%;
   }
 
   /* TABLET */
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .pink[data-astro-cid-jjeidbrj] {
-      width: 30%;
+    .pink {
+      width: 35%;
       position: absolute;
-      top: 62%;
+      top: 69%;
       left: 1%;
       z-index: -1;
       display: block;
     }
 
-    .bb[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+    .bb {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding-top: 0%;
-      margin-bottom: 13%;
-      margin-right: 79%;
-      margin-top: 10%;
-      gap: 38px;
-      height: 67vh;
+      margin-bottom: 11%;
+      margin-left: 12%;
+      margin-top: 9%;
+      gap: 55px;
+      height: 85vh;
     }
 
-    a[data-astro-cid-jjeidbrj] {
-      width: 172px;
+    a {
+      width: 192px;
       height: 62px;
       cursor: pointer;
       font-size: 23px;
       font-weight: bold;
       border: 3px solid #c5117d;
       border-radius: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+    }
+
+    a p {
+      margin-left: 10%;
     }
 
     .button1 {
@@ -113,53 +130,62 @@ const { data } = Astro.props;
 
     .button2 {
       background-color: #d4c2fa;
-      margin-top: -15%;
+      margin-top: -16%;
     }
 
     .button3 {
       background-color: #f9fac2;
-      margin-top: -15%;
+      margin-top: -16%;
     }
 
     .button4 {
       background-color: #d4fac2;
-      margin-top: -16%;
+      margin-top: -10%;
     }
 
-    .button5[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+    .button5 {
       grid-column: 1 / span 2;
       background-color: #c2dcfa;
-      margin-top: -16%;
-      margin-left: 1%;
+      margin-top: -10%;
+      margin-left: 0%;
+    }
+
+    .dot {
+      border-top: 3px dashed #e596cb;
+      height: 25px;
+      width: 34%;
+      margin-top: 3%;
+      margin-bottom: 1%;
+      margin-left: 3%;
     }
   }
 
   /* WEB */
 
   @media only screen and (min-width: 1024px) {
-    .pink[data-astro-cid-jjeidbrj] {
-      width: 21%;
+    .pink {
+      width: 22%;
       position: absolute;
-      top: 138%;
+      top: 113%;
       left: 7%;
       z-index: -1;
       display: block;
     }
 
-    .bb[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+    .bb {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding-top: 0%;
       margin-bottom: 13%;
-      margin-right: 5%;
+      margin-right: 34%;
       margin-top: 10%;
-      gap: 97px;
-      height: 133vh;
+      gap: 85px;
+      height: 117vh;
     }
 
-    a[data-astro-cid-jjeidbrj] {
+    a {
       width: 192px;
       height: 62px;
       cursor: pointer;
@@ -170,30 +196,34 @@ const { data } = Astro.props;
       margin-bottom: 20px;
     }
 
+    a p {
+      margin-left: 10%;
+    }
+
     .button1 {
       background-color: #fac2c9;
     }
 
     .button2 {
       background-color: #d4c2fa;
-      margin-top: -15%;
+      margin-top: -16%;
     }
 
     .button3 {
       background-color: #f9fac2;
-      margin-top: -15%;
+      margin-top: -16%;
     }
 
     .button4 {
       background-color: #d4fac2;
-      margin-top: -16%;
+      margin-top: -10%;
     }
 
-    .button5[data-astro-cid-jjeidbrj][data-astro-cid-jjeidbrj] {
+    .button5 {
       grid-column: 1 / span 2;
       background-color: #c2dcfa;
-      margin-top: -16%;
-      margin-left: 1%;
+      margin-top: -10%;
+      margin-left: 0%;
     }
   }
 </style>
