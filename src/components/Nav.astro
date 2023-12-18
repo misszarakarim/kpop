@@ -283,7 +283,10 @@
       justify-content: center;
       width: 50%;
     }
-
+    .logo {
+      width: 1%;
+      display: flex;
+    }
     .logo img {
       display: none;
     }
@@ -299,8 +302,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    nav {
+      height: 90px;
+    }
     nav .nav-menu {
       position: fixed;
+
       left: 0;
       right: 0;
       top: 0;
